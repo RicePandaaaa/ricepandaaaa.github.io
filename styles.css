@@ -7,7 +7,9 @@
 }
 
 #about, #projects, #teachers {
-    background-color: #420000;
+    background-color: #4830CB;
+    background-image: radial-gradient(circle, #9281ee, transparent 11%);
+    background-size: 10px 10px;
 }
 
 
@@ -16,7 +18,7 @@
  *************************************/
 
 .project-card, .teaching-card {
-    background-color: #3A0000;
+    background-color: #241968;
     color: #FFFFFF;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
@@ -101,9 +103,9 @@ header {
 *****************/
 
 body, #projects-banner, #teachers-banner, footer {
-    background-color: #500000;
-    background-image: radial-gradient(circle, #E0D6, transparent 11%);
-    background-size: 30px 30px;
+    background-color: #130857;
+    background-image: radial-gradient(circle, #4830CB, transparent 11%);
+    background-size: 10px 10px;
 }
 
 /*Border between nav bar and menu popup*/
@@ -119,6 +121,6 @@ html {
 }
 
 .active {
-    color: #7c0000;
+    color: #9281ee;
     font-weight: bold;
 }
