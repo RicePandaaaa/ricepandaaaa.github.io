@@ -1,21 +1,84 @@
 /*******************
- * Section Styling *
+ * General Styling *
  *******************/
 
-.project-card a{
-    color: #99ddf7;
+ body, #projects-banner, #teachers-banner, footer {
+    background-color: #130857;
+    background-image: radial-gradient(circle, #4830CB, transparent 11%);
+    background-size: 15px 15px;
 }
+
+html {
+    scroll-padding-top: 80px; /* Compensation for sticky header */
+}
+
+.hidden {
+    display: none; /* Utility class for hiding elements */
+}
+
+.active {
+    color: #9281EE;
+    font-weight: bold;
+}
+
+.border-line {
+    height: 2px;
+    background-color: white;
+    margin-bottom: 0px; /* Border between navbar and menu popup */
+}
+
+/******************
+ * Header Styling *
+ ******************/
+
+header {
+    background-color: #000000;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#menu, #mobile-menu {
+    background-color: #000000;
+}
+
+@media (min-width: 768px) {
+    #menu {
+        display: flex; /* Show the regular menu on screens wider than 768px */
+    }
+
+    #mobile-menu {
+        display: none; /* Ensure the mobile menu remains hidden on larger screens */
+    }
+}
+
+#mobile-menu a:hover {
+    background-color: #2A2C2C;
+    color: #DF1010;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/****************************
+ * Section-Specific Styling *
+ ****************************/
 
 #about, #projects, #teachers {
     background-color: #4830CB;
-    background-image: radial-gradient(circle, #9281ee, transparent 11%);
-    background-size: 10px 10px;
+    background-image: radial-gradient(circle, #9281EE, transparent 11%);
+    background-size: 15px 15px;
 }
 
+@media (min-width: 1536px) {
+    .container {
+        max-width: 100%; /* Ensure full width for large screens */
+    }
+}
 
-/*************************************
- * Project and Teaching Card Styling *
- *************************************/
+/********************************
+ * Project and Teaching Cards   *
+ ********************************/
 
 .project-card, .teaching-card {
     background-color: #241968;
@@ -43,84 +106,79 @@
 
 .project-card p.italic, .teaching-card p.italic {
     font-style: italic;
-    color: #d3d3d3;
+    color: #D3D3D3;
 }
 
-.project-card a, .teaching-card a, footer a{
+.project-card a, .teaching-card a, footer a {
     color: #77BBD5;
 }
 
 .project-card a:hover, .teaching-card a:hover, footer a:hover {
-    color: #99ddf7;
+    color: #99DDF7;
 }
 
-/****************** 
- * Header Styling *
- ******************/
-header {
-    background-color: #000000;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    width: 100%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+/*************************************
+ * Specific Project Card Enhancements *
+ *************************************/
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
-#menu, #mobile-menu {
-    background-color: #000000;
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
 }
 
-
-@media (min-width: 768px) {
-    #menu {
-        display: flex; /* Show the regular menu on screens wider than 768px */
-    }
-
-    #mobile-menu {
-        display: none; /* Ensure the mobile menu remains hidden on larger screens */
-    }
+.project-card img {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
 }
 
-.hidden {
+.project-card .p-6 {
+    padding: 1.5rem;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.hidden-details {
     display: none;
+    width: 100%;
+    background-color: #241968;
 }
 
-@media (min-width: 1536px) {
-    .container {
-        max-width: 100%; /* Override to ensure full width */
-    }
+.project-card:hover .hidden-details {
+    display: block;
 }
 
-#mobile-menu a:hover {
-    background-color: #2a2c2c;
-    color: #df1010;
+.project-card a.button {
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    background-color: #77BBD5;
+    color: #241968;
+    border-radius: 6px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/****************
-* Uncategorized *
-*****************/
-
-body, #projects-banner, #teachers-banner, footer {
-    background-color: #130857;
-    background-image: radial-gradient(circle, #4830CB, transparent 11%);
-    background-size: 10px 10px;
+.project-card a.button:hover {
+    background-color: #99DDF7;
+    color: #130857;
 }
 
-/*Border between nav bar and menu popup*/
-.border-line {
-    height: 2px;
-    background-color: white;
-    margin-bottom: 0px;
-}
+/****************************
+ * Teaching Card Enhancements *
+ ****************************/
 
-/* Compensation for sticky header */
-html {
-    scroll-padding-top: 80px;
-}
-
-.active {
-    color: #9281ee;
-    font-weight: bold;
+.teaching-card {
+    padding: 1.5rem;
+    margin-bottom: 1rem;
 }

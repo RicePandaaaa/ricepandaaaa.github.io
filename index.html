@@ -90,43 +90,41 @@
         </div>
     </section>
     <section id="projects" class="text-white py-16 w-full">
-        <div class="container mx-auto">
-            <!-- Project Card 1 -->
-            <div class="project-card mb-8 p-6 rounded-lg">
-                <h3 class="text-2xl font-semibold mb-4">Bacon Hunter</h3>
-                <p>Project Link: <a href="https://www.youtube.com/watch?v=gzB9bQtjUVA" target="_blank" rel="noopener noreferrer">YouTube Demo</a></p>
-                <p>
-                    Bacon Hunter is my team's final project for MXET 300 (Mechatronics I) in Spring 2024. Using the given SCUTTLE robot, we designed a robot whose task was to search for a piece of paper with a certain color of green and to aim and fire the attached Nerf gun in order to hit the target. This robot comes with <b>an autonomous dynamic obstacle avoidance system, target search and detection algorithm, gun aiming and firing system, and an autonomous movement and realignment system.</b> I was the software developer responsible for the obstacle avoidance and movement systems. All the code is written in Python 3.
-                </p>
-                <p>
-                    The obstacle avoidance system uses a <b>LIDAR sensor</b> which detects objects within a certain range and angle and turns the robot away from the object. The target search and detection algorithm utilizes an <b>HSV filter</b> to only look for objects that are bright green, and the algorithm also returns data about approximate robot distance away from the target. The movement system uses data from the LIDAR sensor and the HSV filter to determine the speed and direction of the robot and when to stop in order to prepare the firing mechanism.
-                </p>
-            </div>
-    
-            <!-- Project Card 2 -->
-            <div class="project-card mb-8 p-6 rounded-lg">
-                <h3 class="text-2xl font-semibold mb-4">TAO Bot</h3>
-                <p>Project Link: <a href="https://github.com/RicePandaaaa/TAO-Bot" target="_blank" rel="noopener noreferrer">GitHub repository</a></p>
-                <p>
-                    TAO Bot is a bot that I created which helps manage my organization's (<a href="https://bento.me/engrtao" target="_blank" rel="noopener noreferrer">ENGR TA Organization</a>) server! This bot is made purely with Python 3, specifically with discord.py, and lots of love! The bot has been running for over two years and is now serving over 4,400 Texas A&M faculty, peer teachers, and students!
-                </p>
-                <p>
-                    The bot has helped a lot with ensuring the server is run as smoothly as possible while allowing students to receive help and advice comfortably. This is done with the help of the bot's several functions, including: <b>custom help commands</b> to help quickly relay information between staff and students, <b>automated role selection and channel creation</b> to organize members and channels, and <b>integrating an office hours system with queues and Discord voice channels</b> to streamline peer teachers' office hour sessions with students.
-                </p>
-            </div>
-    
-            <!-- Project Card 3 -->
-            <div class="project-card mb-8 p-6 rounded-lg">
-                <h3 class="text-2xl font-semibold mb-4">American Sign Language Detection Model</h3>
-                <p>Project Link: <a href="https://github.com/RicePandaaaa/ASL-RNN-ApplyAI" target="_blank" rel="noopener noreferrer">GitHub repository</a></p>
-                <p>
-                    This model is my project for AI4ALL's Apply AI program in Spring 2023. For my project, I opted to tackle <a href="https://www.kaggle.com/competitions/asl-signs/overview" target="_blank" rel="noopener noreferrer">Google's Isolated Sign Language Recognition Kaggle challenge</a>. Due to being new to machine learning and not having a strong-enough GPU to handle all the data, I limited the data to five words, and built, trained, and tested <b>six different recurrent neural networks</b> to try to identify the correct word based on the file data.
-                </p>
-                <p>
-                    With the assistance of my mentor, I learned the <b>basics of data processing and cleaning with pandas and numpy</b> to extract the useful data and form it into input data for my models. I also learned how to use <b>tensorflow and keras</b> to make a basic recurrent neural network (RNN) that would train on the input data. After some testing, I would then adjust the model parameters to attempt to make improvements. After finalizing six basic models, I used <b>matplotlib to visualize the models' performances</b> into easily understood and comparable metrics.
-                </p>
+        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div class="project-card flex flex-col bg-[#241968] rounded-lg shadow-lg overflow-hidden transition-transform duration-300">
+                <!-- Top Section -->
+                <div class="flex flex-col lg:flex-row">
+                    <img src="assets/bacon_hunter.png" alt="Bacon Hunter Image">
+                    <div class="p-4">
+                        <div>
+                            <h3 class="text-2xl font-semibold mb-2">Bacon Hunter</h3>
+                            <p class="text-gray-300 mb-4">
+                                Bacon Hunter is my team's final project for MXET 300 (Mechatronics I) in Spring 2024.
+                            </p>
+                            <h3 class="text-lg font-semibold mb-2">Languages:</h3>
+                            <p class="text-gray-300 mb-4">Python 3</p>
+                            <h3 class="text-lg font-semibold mb-2">Core Concepts:</h3>
+                            <p class="text-gray-300 mb-4">LIDAR, dynamic obstacle avoidance, autonomous motion</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bottom Section -->
+                <div class="hidden-details text-white p-4 hidden transition-all duration-300">
+                    <p class="font-bold text-lg">Full Description:</p>
+                    <p>
+                        Using the given SCUTTLE robot, we designed a robot whose task was to search for a piece of paper with a certain color of green and to aim and fire the attached Nerf gun in order to hit the target. This robot comes with an autonomous dynamic obstacle avoidance system, target search and detection algorithm, gun aiming and firing system, and an autonomous movement and realignment system. I was the software developer responsible for the obstacle avoidance and movement systems. All the code is written in Python 3.
+                        <br><br>
+                        The obstacle avoidance system uses a LIDAR sensor which detects objects within a certain range and angle and turns the robot away from the object. The target search and detection algorithm utilizes an HSV filter to only look for objects that are bright green, and the algorithm also returns data about approximate robot distance away from the target. The movement system uses data from the LIDAR sensor and the HSV filter to determine the speed and direction of the robot and when to stop in order to prepare the firing mechanism. 
+                    </p>
+                    <a href="https://www.youtube.com/watch?v=gzB9bQtjUVA" target="_blank"
+                        class="mt-4 inline-block bg-blue-500 text-white px-4 py-2 rounded-lg button">
+                        View Project Demo on YouTube
+                    </a>
+                </div>
             </div>
         </div>
+        
+        
     </section>
 
     <!-- Teaching Experience Section -->
