@@ -24,8 +24,8 @@ function typeText(element, text, speed, callback) {
   
     // Type each line one by one
     typeText(line1, "Howdy! I'm Anthony Pham!", 20, () => {
-      typeText(line2, "I'm a multidisciplinary (mechatronics) engineer improving education through innovative software!", 20, () => {
-        typeText(line3, "Feel free to explore my lives as a student, a coder, a teacher, and a hobbyist! (Website is in renovation!)", 20);
+      typeText(line2, "I'm a multidisciplinary (mechatronics) engineer improving education through innovative software!", 1, () => {
+        typeText(line3, "Feel free to explore my lives as a student, a coder, a teacher, and a hobbyist! (Website is in renovation!)", 1);
       });
     });
   });

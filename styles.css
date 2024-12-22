@@ -3,7 +3,9 @@
  *******************/
 
  body.console-background {
-    background: linear-gradient(45deg, #000864, #5b25b2);
+    background: rgb(5, 1, 42);
+    background-image: radial-gradient(circle, #4830CB, transparent 11%);
+    background-size: 15px 15px;
     color: #33ff33;
     font-family: monospace;
     display: flex;
