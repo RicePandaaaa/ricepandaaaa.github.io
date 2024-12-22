@@ -1,69 +1,32 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    // Ensure the mobile menu is hidden initially
-    mobileMenu.classList.add('hidden');
-
-    // Toggle the mobile menu on button click
-    menuBtn.addEventListener('click', function() {
-        if (mobileMenu.classList.contains('hidden')) {
-            mobileMenu.classList.remove('hidden');
-        } else {
-            mobileMenu.classList.add('hidden');
-        }
+// Typing Animation Function
+function typeText(element, text, speed, callback) {
+    let index = 0;
+    const interval = setInterval(() => {
+      if (index < text.length) {
+        element.textContent += text.charAt(index);
+        index++;
+      } else {
+        clearInterval(interval);
+        if (callback) callback();
+      }
+    }, speed);
+  }
+  
+  document.addEventListener("DOMContentLoaded", () => {
+    const line1 = document.getElementById("line1");
+    const line2 = document.getElementById("line2");
+    const line3 = document.getElementById("line3");
+  
+    // Clear content to simulate typing
+    line1.textContent = ">> ";
+    line2.textContent = ">> ";
+    line3.textContent = ">> ";
+  
+    // Type each line one by one
+    typeText(line1, "Howdy! I'm Anthony Pham!", 20, () => {
+      typeText(line2, "I'm a multidisciplinary (mechatronics) engineer improving education through innovative software!", 20, () => {
+        typeText(line3, "Feel free to explore my lives as a student, a coder, a teacher, and a hobbyist! (Website is in renovation!)", 20);
+      });
     });
-
-    // Hide mobile menu when resizing to a screen width larger than 768px
-    window.addEventListener('resize', function() {
-        if (window.innerWidth >= 768) {
-            if (!mobileMenu.classList.contains('hidden')) {
-                mobileMenu.classList.add('hidden');
-            }
-        }
-    });
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('nav a');
-
-    window.addEventListener('scroll', () => {
-        let currentSection = '';
-
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop - 180; // Adjust based on your header height
-            const sectionHeight = section.clientHeight;
-
-            if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-                currentSection = section.getAttribute('id');
-            }
-        });
-
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-
-            // Check for sections in groups
-            if (
-                (currentSection === 'intro' || currentSection === 'about') && 
-                link.getAttribute('data-target') === 'intro'
-            ) {
-                link.classList.add('active');
-            } else if (
-                (currentSection === 'projects-banner' || currentSection === 'projects') && 
-                link.getAttribute('data-target') === 'projects-banner'
-            ) {
-                link.classList.add('active');
-            } else if (
-                (currentSection === 'teachers-banner' || currentSection === 'teachers') && 
-                link.getAttribute('data-target') === 'teachers-banner'
-            ) {
-                link.classList.add('active');
-            }
-        });
-    });
-});
-
-
-
-
+  });
+  
