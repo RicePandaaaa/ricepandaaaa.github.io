@@ -1,98 +1,126 @@
 /*******************
- * General Layout *
+ * Section Styling *
  *******************/
 
- body.console-background {
-    background: 
-        radial-gradient(circle, #9b8484, transparent 11%),
-        linear-gradient(45deg, #0a237d, #5d049d);
-    background-size: 15px 15px, cover;
-    color: #98cee9;
-    font-family: monospace;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-    padding: 1rem;
-    box-sizing: border-box;
-  }
+.project-card a{
+    color: #99ddf7;
+}
 
-/**********
- * Footer *
- **********/
+#about, #projects, #teachers {
+    background-color: #4830CB;
+    background-image: radial-gradient(circle, #9281ee, transparent 11%);
+    background-size: 10px 10px;
+}
 
- footer {
-    margin-top: auto;
-    margin-bottom: -15px;
- }
 
- footer a {
-    color: #00FFFF;
- }
+/*************************************
+ * Project and Teaching Card Styling *
+ *************************************/
 
- footer a:hover {
-    color: #7FFFD4;
- }
-  
-  /*******************
-   * Text Section *
-   *******************/
-  
-  .typewriter-container {
+.project-card, .teaching-card {
+    background-color: #241968;
+    color: #FFFFFF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    overflow: hidden;
+    max-width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover, .teaching-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h3, .teaching-card h3 {
+    color: #FFFFFF;
+}
+
+.project-card p, .teaching-card p {
+    color: #E0E0E0;
+    margin-bottom: 1rem;
+    line-height: 1.75;
+}
+
+.project-card p.italic, .teaching-card p.italic {
+    font-style: italic;
+    color: #d3d3d3;
+}
+
+.project-card a, .teaching-card a, footer a{
+    color: #77BBD5;
+}
+
+.project-card a:hover, .teaching-card a:hover, footer a:hover {
+    color: #99ddf7;
+}
+
+/****************** 
+ * Header Styling *
+ ******************/
+header {
+    background-color: #000000;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     width: 100%;
-    max-width: 90%;
-    margin: 0 auto;
-    padding: 2rem 0;
-    text-align: left;
-  }
-  
-  /*******************
-   * Grid Section *
-   *******************/
-  
-  .bars-container {
-    gap: 2rem;
-    width: 100%;
-    margin: 3rem auto 0;
-  }
-  
-  /*******************
-   * Persona Buttons *
-   *******************/
-  
-  .persona-bar {
-    padding: 1rem;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-  }
-  
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
 
-  /* Image inside the buttons */
-  .persona-image {
-    width: 100%; 
-    height: auto; 
-    transition: transform 0.3s ease; 
-  }
-  
-  /*******************
-   * Hover Effects for Images *
-   *******************/
-  
-  #coder-bar:hover .persona-image {
-    content: url("assets/home_page/computer_hover.png");
-  }
-  
-  #student-bar:hover .persona-image {
-    content: url("assets/home_page/computer_hover.png");
-  }
-  
-  #hobbyist-bar:hover .persona-image {
-    content: url("assets/home_page/computer_hover.png");
-  }
-  
-  #teacher-bar:hover .persona-image {
-    content: url("assets/home_page/computer_hover.png");
-  }
-  
+
+#menu, #mobile-menu {
+    background-color: #000000;
+}
+
+
+@media (min-width: 768px) {
+    #menu {
+        display: flex; /* Show the regular menu on screens wider than 768px */
+    }
+
+    #mobile-menu {
+        display: none; /* Ensure the mobile menu remains hidden on larger screens */
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+@media (min-width: 1536px) {
+    .container {
+        max-width: 100%; /* Override to ensure full width */
+    }
+}
+
+#mobile-menu a:hover {
+    background-color: #2a2c2c;
+    color: #df1010;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/****************
+* Uncategorized *
+*****************/
+
+body, #projects-banner, #teachers-banner, footer {
+    background-color: #130857;
+    background-image: radial-gradient(circle, #4830CB, transparent 11%);
+    background-size: 10px 10px;
+}
+
+/*Border between nav bar and menu popup*/
+.border-line {
+    height: 2px;
+    background-color: white;
+    margin-bottom: 0px;
+}
+
+/* Compensation for sticky header */
+html {
+    scroll-padding-top: 80px;
+}
+
+.active {
+    color: #9281ee;
+    font-weight: bold;
+}
