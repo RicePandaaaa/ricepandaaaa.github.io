@@ -3,7 +3,7 @@
  *******************/
 
  body {
-    background-color: #130857;
+    background-color: #596B84;
     color: #FFFFFF;
 }
 
@@ -30,50 +30,114 @@ a:hover {
 
 /* Sections with darker dotted background */
 #intro, #projects-banner, #teachers-banner, footer {
-    background-color: #130857; /* Ensure base color is set if gradient fails */
+    background-color: #2F3A4C; /* Ensure base color is set if gradient fails */
 }
 
 /* Sections with lighter dotted background */
-#about, #projects, #teachers, #tech-logos {
-    background-color: #4830CB; /* Ensure base color is set if gradient fails */
+#about, #projects, #teachers /* Removed #tech-logos */ {
+    background-color: #596B84; /* Ensure base color is set if gradient fails */
 }
 
 /************************
  * Individual Sections *
  ************************/
 
-#intro img.profile-picture { /* Profile image */
+/* --- Start: New Intro Section Layout --- */
+#intro {
+    /* Base styles for the section */
+    background-color: #1F2A3C; /* Ensure background is set */
+}
+
+.intro-container {
+    display: flex;
+    flex-direction: column; /* Stack columns by default (mobile) */
+    align-items: center; /* Center items vertically on mobile */
+}
+
+/* Styles for medium screens and up (md: breakpoint, 768px) */
+@media (min-width: 768px) {
+    .intro-container {
+        max-width: 100%;
+        flex-direction: row; /* Arrange columns side-by-side */
+        align-items: center; /* Align items to the top */
+        justify-content: center; /* Optional: Adjust spacing */
+    }
+
+    .intro-left {
+        /* Widths are set via Tailwind classes (md:w-2/5 lg:w-1/3) */
+        text-align: left; /* Align text left */
+        margin-bottom: 0; /* Remove bottom margin added by stacking */
+        padding-right: 2rem; /* Space between columns */
+    }
+
+    .intro-left img.profile-picture {
+        margin-left: 0; /* Override mx-auto */
+        margin-right: 0; /* Override mx-auto */
+    }
+
+    .intro-left .flex { /* Targeting social icons container */
+        justify-content: flex-start; /* Align icons left */
+    }
+
+    .intro-right {
+        /* Widths are set via Tailwind classes (md:w-3/5 lg:w-2/3) */
+        margin-top: 0; /* Remove top margin added by stacking */
+        text-align: left; /* Align text left */
+        padding-left: 2rem; /* Space between columns */
+        display: flex; /* Use flexbox for vertical spacing */
+        flex-direction: column;
+        justify-content: space-between; /* Space out quote and tech */
+        height: 100%; /* Allow flexbox to distribute space */
+    }
+
+    .intro-quote, .intro-tech {
+        text-align: left; /* Align content left */
+    }
+
+     .intro-quote p {
+        margin-left: 0; /* Override mx-auto */
+        margin-right: 0; /* Override mx-auto */
+     }
+
+    .intro-tech .flex { /* Targeting tech logo container */
+        justify-content: flex-start; /* Align logos left */
+    }
+}
+
+/* Ensure existing profile picture styles apply */
+#intro img.profile-picture {
     border: 4px solid white;
 }
-#intro .flex a img { /* Social icons */
+
+/* Ensure existing social icon styles apply */
+#intro .flex a img {
     transition: transform 0.3s ease;
 }
 #intro .flex a:hover img {
-    transform: scale(1.1); /* Slight zoom effect on hover */
+    transform: scale(1.1);
 }
 
-
-
-#tech-logos .container div { /* Targeting the flex container for logos */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 2rem; /* Spacing between logos */
+/* Style the new headings within intro-right */
+.intro-quote h2, .intro-tech h2 {
+    color: #FFFFFF; /* Or another suitable color */
+    /* font-size: 1.875rem; /* text-3xl */
+    /* font-weight: 600; /* font-semibold */
+    /* margin-bottom: 1rem; /* mb-4 or mb-8 */
 }
 
+/* --- End: New Intro Section Layout --- */
+
+
+/* Tech Logo styles (now inside Intro) */
 .tech-logo {
-    height: 60px; /* Adjust size as needed */
+    height: 55px; /* Maybe slightly smaller in this layout */
     width: auto; /* Maintain aspect ratio */
-    /* margin: 10px; Removed in favor of gap */
     transition: transform 0.2s ease-in-out;
 }
 
 .tech-logo:hover {
     transform: scale(1.1); /* Slight zoom effect on hover */
 }
-
-
 
 /* Project and Teaching Grid/Card Styling */
 #projects .container,
@@ -104,13 +168,14 @@ a:hover {
 }
 
 .project-card, .teaching-card {
-    background-color: #241968;
+    background-color: #2F3A4C;
     color: #FFFFFF;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
-    overflow: hidden; /* Important for aspect-ratio and border-radius */
+    overflow: hidden; /* Keep to respect border-radius */
     transition: transform 0.3s ease;
     padding: 1.5rem; /* Padding inside the card */
+    min-height: 150px; /* Optional: Ensure minimum height */
 }
 
 .project-card:hover, .teaching-card:hover {
@@ -120,7 +185,7 @@ a:hover {
 .project-card h3, .teaching-card h3 {
     color: #FFFFFF;
     margin-bottom: 0.5rem;
-    flex-shrink: 0; /* Prevent title from shrinking */
+    /* flex-shrink: 0; <-- Removed */
 }
 
 /* Content within cards */
@@ -128,34 +193,29 @@ a:hover {
 .project-card ul, .teaching-card ul {
     color: #E0E0E0;
     margin-bottom: 0.5rem;
-    line-height: 1.5; /* Adjusted line height */
-    flex-grow: 1; /* Allow text content to expand */
-    overflow-y: auto; /* Add scroll if content overflows */
-    font-size: 0.9rem; /* Adjust font size for better fit */
-    scrollbar-width: thin; /* Optional: Style scrollbar */
-    scrollbar-color: #9281ee #241968; /* Optional: Style scrollbar */
+    line-height: 1.5;
+    font-size: 0.9rem;
+     /* Removed flex-grow and overflow-y */
 }
 
 .project-card ul, .teaching-card ul {
-    list-style: disc; /* Add bullet points */
-    padding-left: 1.5rem; /* Indent list */
-    margin-top: 0.5rem; /* Space above list */
+    list-style: disc;
+    padding-left: 1.5rem;
+    margin-top: 0.5rem;
 }
 
 /* Links specifically within cards */
 .project-card a, .teaching-card a {
-    color: #77BBD5; /* Use default link color or specify */
-    font-weight: bold; /* Make links stand out */
+    color: #77BBD5;
+    font-weight: bold;
 }
 
 .project-card a:hover, .teaching-card a:hover {
-    color: #99ddf7; /* Use default hover or specify */
+    color: #99ddf7;
 }
-
 
 /* Footer Section */
 footer {
-    /* Styles */
     padding-top: 1rem;
     padding-bottom: 1rem;
     margin-top: 2rem; /* Ensure space above footer */
