@@ -7,8 +7,6 @@
     <title>Anthony Ha-Anh Pham</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
     <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
@@ -17,49 +15,18 @@
 
 <body class="text-white flex flex-col items-center">
 
-    <header class="shadow-lg w-full">
-        <div class="full-width-container p-4 flex justify-between items-center">
-            <div>
-                <h1 class="text-3xl font-bold"><a href="#">Anthony Ha-Anh Pham</a></h1>
-            </div>
-            <!-- Menu Button for small screens -->
-            <div class="md:hidden">
-                <button id="menu-btn" class="text-white focus:outline-none">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16m-7 6h7"></path>
-                    </svg>
-                </button>
-            </div>
-            <!-- Navbar Links -->
-            <nav id="menu" class="hidden md:flex space-x-6 ml-auto">
-                <a href="#intro" data-target="intro" class="text-lg active">Intro</a>
-                <a href="#projects-banner" data-target="projects-banner" class="text-lg">Projects</a>
-                <a href="#teachers-banner" data-target="teachers-banner" class="text-lg">Teaching</a>
-            </nav>
-        </div>
-        <div class="border-line"></div>
-        <!-- Collapsible Menu for small screens -->
-        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg">
-            <a href="#intro" class="block text-lg p-4">Intro</a>
-            <a href="#projects-banner" class="block text-lg p-4">Projects</a>
-            <a href="#teachers-banner" class="block text-lg p-4">Teaching</a>
-        </div>
-    </header>    
+    <section id="intro" class="text-center py-20 w-full">
+        <img src="assets/headshot_zoomedin.png" alt="Anthony Ha-Anh Pham" class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-white profile-picture">
 
-    <!-- Profile Section -->
-    <section id="intro" class="text-center py-20">
-        <img src="assets/headshot_zoomedin.png" alt="Anthony Ha-Anh Pham" class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-white">
-
-        <h1 class="text-3xl font-semibold mb-2">Anthony Ha-Anh Pham</h1>
-        <p class="text-lg mb-6">Student, Engineer, & Teacher!</p>
+        <h1 class="text-4xl font-semibold mb-2">Anthony Ha-Anh Pham</h1>
+        <p class="text-xl mb-6">Student, Engineer, & Teacher!</p>
 
         <div class="flex justify-center space-x-6">
             <a href="https://github.com/RicePandaaaa" target="_blank" class="hover:opacity-75 transition-opacity">
                 <img src="assets/github-mark-white.png" alt="GitHub" class="w-8 h-8">
             </a>
             <a href="https://www.linkedin.com/in/anthony-ha-pham/" target="_blank" class="hover:opacity-75 transition-opacity">
-                <img src="assets\In-White-14@2x.png" alt="LinkedIn" class="w-8 h-8">
+                <img src="assets/In-White-14@2x.png" alt="LinkedIn" class="w-8 h-8">
             </a>
             <a href="https://www.youtube.com/@ptanthony" target="_blank" class="hover:opacity-75 transition-opacity">
                 <img src="assets/yt_icon_rgb.png" alt="YouTube" class="w-12 h-8">
@@ -70,154 +37,192 @@
         </div>
     </section>
 
-    <!-- Introduction Section -->
-    <section id="about" class="text-white py-8 w-full">
-        <div class="container mx-auto text-center">
+    <section id="about" class="text-white py-12 w-full">
+        <div class="container mx-auto text-center px-4">
             <h2 class="text-3xl font-semibold mb-4">Howdy!</h2>
             <p class="text-lg leading-relaxed max-w-2xl mx-auto">
-                I am a senior Multidisciplinary Engineering (Mechatronics Track) student at Texas A&M, and my passions involve incorporating software and hardware in learning environments to improve the quality of education!
+                I am a senior Multidisciplinary Engineering (Mechatronics Track) student at Texas A&M, passionate about incorporating software and hardware in learning environments to improve the quality of education!
             </p>
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <section id="tech-logos" class="py-12 w-full">
+        <div class="container mx-auto text-center px-4">
+            <h2 class="text-3xl font-semibold mb-8">Technologies I Use</h2>
+            <div class="flex justify-center items-center flex-wrap gap-8">
+                <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer" title="Python">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png" alt="Python Logo" class="tech-logo">
+                </a>
+                <a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank" rel="noopener noreferrer" title="C Programming Language">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/1962px-C_Programming_Language.svg.png" alt="C Language Logo" class="tech-logo">
+                 </a>
+                <a href="https://flutter.dev/" target="_blank" rel="noopener noreferrer" title="Flutter">
+                    <img src="assets/flutter.png" alt="Flutter Logo Mark" class="tech-logo"> </a>
+                <a href="https://discordpy.readthedocs.io/" target="_blank" rel="noopener noreferrer" title="discord.py">
+                    <img src="https://raw.githubusercontent.com/python-discord/branding/main/logos/logo_circle/logo_circle.png" alt="discord.py Community Logo" class="tech-logo"> </a>
+                <a href="https://www.arduino.cc/" target="_blank" rel="noopener noreferrer" title="Arduino">
+                    <img src="assets/arduino.png" alt="Arduino Logo Mark" class="tech-logo"> </a>
+                </div>
+        </div>
+    </section>
+
     <section id="projects-banner" class="text-white py-8 w-full">
-        <div class="container mx-auto text-center">
+        <div class="container mx-auto text-center px-4">
             <h2 class="text-3xl font-semibold mb-4">My Projects</h2>
             <p class="text-lg leading-relaxed max-w-6xl mx-auto italic">
                 "I am learning to build and building to learn."
             </p>
         </div>
     </section>
+
     <section id="projects" class="text-white py-16 w-full">
-        <div class="container mx-auto">
-            <!-- Project Card 1 -->
-            <div class="project-card mb-8 p-6 rounded-lg">
-                <h3 class="text-2xl font-semibold mb-4">Bacon Hunter</h3>
-                <p>Project Link: <a href="https://www.youtube.com/watch?v=gzB9bQtjUVA" target="_blank" rel="noopener noreferrer">YouTube Demo</a></p>
+        <div class="container mx-auto"> 
+            <div class="project-card">
+                <h3 class="text-2xl font-semibold">Blood Glucose Monitor</h3>
+                <p><a href="https://github.com/RicePandaaaa/KHealth" target="_blank" rel="noopener noreferrer">GitHub repository</a></p>
                 <p>
-                    Bacon Hunter is my team's final project for MXET 300 (Mechatronics I) in Spring 2024. Using the given SCUTTLE robot, we designed a robot whose task was to search for a piece of paper with a certain color of green and to aim and fire the attached Nerf gun in order to hit the target. This robot comes with <b>an autonomous dynamic obstacle avoidance system, target search and detection algorithm, gun aiming and firing system, and an autonomous movement and realignment system.</b> I was the software developer responsible for the obstacle avoidance and movement systems. All the code is written in Python 3.
+                    Lead software developer for senior year capstone design team, developing <b>all software</b> for a blood glucose monitor.
+                    
+                    <br><br>Features:
+                    <ul>
+                        <li>Android app with BLE communication and data visualization</li>
+                        <li>ESP32-S3 microcontroller that extracts data using a virtual serial port from a USB-CDC connection</li>
+                        <li>XGBoost ML model for glucose level estimation</li>
+                    </ul>
                 </p>
                 <p>
-                    The obstacle avoidance system uses a <b>LIDAR sensor</b> which detects objects within a certain range and angle and turns the robot away from the object. The target search and detection algorithm utilizes an <b>HSV filter</b> to only look for objects that are bright green, and the algorithm also returns data about approximate robot distance away from the target. The movement system uses data from the LIDAR sensor and the HSV filter to determine the speed and direction of the robot and when to stop in order to prepare the firing mechanism.
-                </p>
-            </div>
-    
-            <!-- Project Card 2 -->
-            <div class="project-card mb-8 p-6 rounded-lg">
-                <h3 class="text-2xl font-semibold mb-4">TAO Bot</h3>
-                <p>Project Link: <a href="https://github.com/RicePandaaaa/TAO-Bot" target="_blank" rel="noopener noreferrer">GitHub repository</a></p>
-                <p>
-                    TAO Bot is a bot that I created which helps manage my organization's (<a href="https://bento.me/engrtao" target="_blank" rel="noopener noreferrer">ENGR TA Organization</a>) server! This bot is made purely with Python 3, specifically with discord.py, and lots of love! The bot has been running for over two years and is now serving over 4,400 Texas A&M faculty, peer teachers, and students!
-                </p>
-                <p>
-                    The bot has helped a lot with ensuring the server is run as smoothly as possible while allowing students to receive help and advice comfortably. This is done with the help of the bot's several functions, including: <b>custom help commands</b> to help quickly relay information between staff and students, <b>automated role selection and channel creation</b> to organize members and channels, and <b>integrating an office hours system with queues and Discord voice channels</b> to streamline peer teachers' office hour sessions with students.
+                    <br> <b>Languages used:</b> C, Dart, Python 3
+                    <br> <b>Libraries used:</b> ESP-IDF, XGBoost, m2cgen
+                    <br> <b>Technologies used:</b> Flutter, Android Studio
+                    <br> <b>Date:</b> August 2024 - April 2025
                 </p>
             </div>
-    
-            <!-- Project Card 3 -->
-            <div class="project-card mb-8 p-6 rounded-lg">
-                <h3 class="text-2xl font-semibold mb-4">American Sign Language Detection Model</h3>
-                <p>Project Link: <a href="https://github.com/RicePandaaaa/ASL-RNN-ApplyAI" target="_blank" rel="noopener noreferrer">GitHub repository</a></p>
+
+            <div class="project-card">
+                <h3 class="text-2xl font-semibold">Gesture</h3>
+                <p><a href="https://github.com/AxeFontaine/tamuhack25" target="_blank" rel="noopener noreferrer">GitHub repository</a></p>
                 <p>
-                    This model is my project for AI4ALL's Apply AI program in Spring 2023. For my project, I opted to tackle <a href="https://www.kaggle.com/competitions/asl-signs/overview" target="_blank" rel="noopener noreferrer">Google's Isolated Sign Language Recognition Kaggle challenge</a>. Due to being new to machine learning and not having a strong-enough GPU to handle all the data, I limited the data to five words, and built, trained, and tested <b>six different recurrent neural networks</b> to try to identify the correct word based on the file data.
+                    One of four members of a team that developed a website for learning sign language using <b>computer vision</b>. Primarily responsible for the 
+                    development of the sign detection model.
+                    
+                    <br><br>Responsible for:
+                    <ul>
+                        <li>Computer vision model for sign detection</li>
+                        <li>Handmade dataset for each of the alphabet letters</li>
+                    </ul>
                 </p>
                 <p>
-                    With the assistance of my mentor, I learned the <b>basics of data processing and cleaning with pandas and numpy</b> to extract the useful data and form it into input data for my models. I also learned how to use <b>tensorflow and keras</b> to make a basic recurrent neural network (RNN) that would train on the input data. After some testing, I would then adjust the model parameters to attempt to make improvements. After finalizing six basic models, I used <b>matplotlib to visualize the models' performances</b> into easily understood and comparable metrics.
+                    <br> <b>Languages used:</b> Python 3
+                    <br> <b>Libraries used:</b> OpenCV, tensorflow, numpy, pandas
+                    <br> <b>Tools used:</b> Jupyter Notebook
+                    <br> <b>Date:</b> February 2025
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3 class="text-2xl font-semibold">Bacon Hunter</h3>
+                <p><a href="https://www.youtube.com/watch?v=gzB9bQtjUVA" target="_blank" rel="noopener noreferrer">YouTube Demo</a></p>
+                <p>
+                    Lead software developer for an autonomous target-seeking <a href="https://www.scuttlerobot.org/" target="_blank" rel="noopener noreferrer">SCUTTLE</a> robot for <a href="https://catalog.tamu.edu/undergraduate/course-descriptions/mxet/" target="_blank" rel="noopener noreferrer">MXET 300</a> class. 
+                    
+                    <br><br>Responsible for:
+                    <ul>
+                        <li>Dynamic obstacle avoidance algorithm</li>
+                        <li>Autonomous navigation</li>
+                        <li>Target detection using HSV filter</li>
+                    </ul>
+                </p>
+                <p>
+                    <br> <b>Languages used:</b> Python 3
+                    <br> <b>Libraries used:</b> OpenCV, numpy
+                    <br> <b>Tools used:</b> Arduino, Raspberry Pi
+                    <br> <b>Date:</b> March 2024 - April 2024
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3 class="text-2xl font-semibold">TAO Bot</h3>
+                <p><a href="https://github.com/RicePandaaaa/TAO-Bot" target="_blank" rel="noopener noreferrer">GitHub repository</a></p>
+                <p>
+                    Creator and maintainor of a <b>Discord bot</b> which manages the ENGR TA Organization server, serving over 5,000 Texas A&M faculty, TAs, and students at its peak. 
+                    
+                    <br><br>Features include:
+                    <ul>
+                        <li>Custom help commands</li>
+                        <li>Automated role/channel management</li>
+                        <li>Integrated office hours queue system</li>
+                    </ul>
+                </p>
+                <p>
+                    <br> <b>Languages used:</b> Python 3
+                    <br> <b>Libraries used:</b> discord.py  
+                    <br> <b>Tools used:</b> Discord
+                    <br> <b>Date:</b> August 2023 - Present
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3 class="text-2xl font-semibold">ASL Detection Model</h3>
+                <p><a href="https://github.com/RicePandaaaa/ASL-RNN-ApplyAI" target="_blank" rel="noopener noreferrer">GitHub repository</a></p>
+                <p>
+                    Lead developer for my group in AI4ALL Apply AI's Spring 2023 cohort, creating <b>recurrent neural networks (RNNs)</b> to detect five American Sign Language (ASL) words.
+
+                    <br><br>Includes six versions of a RNN, each with different hyperparameters. Data is found in Google's <a href="https://www.kaggle.com/competitions/asl-signs/overview" target="_blank" rel="noopener noreferrer"></a>Kaggle ASL challenge</a>.
+                </p>
+                <p>
+                    <br> <b>Languages used:</b> Python 3
+                    <br> <b>Libraries used:</b> Keras, TensorFlow,pandas, numpy, matplotlib
+                    <br> <b>Tools used:</b> Jupyter Notebook
+                    <br> <b>Date:</b> February 2023 - April 2023
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- Teaching Experience Section -->
     <section id="teachers-banner" class="text-white py-8 w-full">
-        <div class="container mx-auto text-center">
+        <div class="container mx-auto text-center px-4">
             <h2 class="text-3xl font-semibold mb-4">Teaching Experience</h2>
             <p class="text-lg leading-relaxed max-w-6xl mx-auto italic">
                 "Teaching is more than bringing students to the destination of understanding: it's also about bringing joy to the journey they embark on."
             </p>
         </div>
     </section>
+
     <section id="teachers" class="text-white py-16 w-full">
-        <div class="container mx-auto">
-            <!-- Teaching Card 1 -->
-            <div class="teaching-card mb-8">
-                <div class="p-6">
-                    <h3 class="text-2xl font-semibold mb-4">Freshman Engineering Peer Teacher</h3>
-
-                    <p><b>Employer: </b>
-                        <a href="https://engineering.tamu.edu/contact/index.html#EASA" target="_blank" rel="noopener noreferrer">TAMU's Engineering Academic and Student Affairs</a>
-                    </p>
-                    <p>
-                        Since August 2022, I serve as a peer teacher <b>for freshman engineering classes</b> at Texas A&M, specifically for the Intro to Computation class (ENGR 102) and Experimental Physics and Engineering Lab I (ENGR/PHYS 216) classes. I also work closely with the course coordinators to ensure that my teaching and mentoring are at their best and are based on the most up-to-date information. As a third year peer teacher, I am also tasked in <b>helping newer peer teachers</b> learn the ropes of the job. 
-                    </p>
-                    <p>
-                        In the classroom, I help students understand lecture content and their assignments while challenging them to critically think like an engineer in order to do efficient and effective problem-solving. I hope that as I do so that I can show students that learning is more than a process and a means of information collection: <b>learning is a life-long journey filled with opportunities</b> to better understand and to truly experience life as a participant rather than a bystander. Outside of the classroom, I am making <b>additional videos and notes</b> while answering questions in office hours and in the ENGR TA Organization's Discord server, home to over 4400 Texas A&M faculty, peer teachers, and students!
-                    </p>
-                </div>
+        <div class="container mx-auto"> <div class="teaching-card">
+                <h3 class="text-2xl font-semibold">Freshman Engineering Peer Teacher</h3>
+                <p><b>Employer: </b>
+                    <a href="https://engineering.tamu.edu/contact/index.html#EASA" target="_blank" rel="noopener noreferrer">TAMU EASA</a>
+                </p>
+                <p>
+                    Since Aug 2022, Peer Teacher for ENGR 102 (Intro to Computation) & ENGR/PHYS 216 (Lab I) at TAMU. Mentor newer peer teachers. Foster critical thinking, support students via office hours, Discord (4400+ members), and supplemental materials (videos/notes).
+                </p>
             </div>
-            
-            <!-- Teaching Card 2 -->
-            <div class="teaching-card mb-8">
-                <div class="p-6">
-                    <h3 class="text-2xl font-semibold mb-4">Texas A&M Peer Mentor</h3>
 
-                    <p style="margin-bottom: 0;"><b>Programs: </b>
-                    <ul>
-                        <li>
-                            Engineering Summer Bridge Program (ESBP)
-                        </li>
-                        <li>
-                            Virtual Introduction to Python (VIP)
-                        </li>
-                        <li>
-                            <a href="https://engineering.tamu.edu/student-life/seas/fgen/index.html" target="_blank" rel="noopener noreferrer">First-Generation Engineering Students Mentoring Program (FGEn)</a>
-                        </li>
-                    </ul>
-                    </p>
-                    <p>
-                        Since July 2023, I have been mentoring <b>incoming and current first-year engineering students</b>. As an ESBP mentor, I am tasked with ensuring that incoming freshmen adapt to university life and coursework during their four-week summer stay at Texas A&M to learn pre-calculus and calculus. As a VIP mentor, I virtually connect with students to introduce them to the core basics of Python 3 in order to prepare them for their Intro to Computation (ENGR 102) class. And as a FGEn mentor, I assist my mentees with navigating through their freshman year, directing them to campus resources and providing them personalized advice.
-                    </p>
-                    <p>
-                        Regardless of the program or the mentee, my focus is work-life balance. It is easy to get lost in academics, so I encourage my mentees to <b>integrate their coursework and studying into their lives</b> rather than letting it replace their whole identity and individuality.
-                    </p>
-                </div>
-            </div>
-            
-            <!-- Teaching Card 3 -->
             <div class="teaching-card">
-                <div class="p-6">
-                    <h3 class="text-2xl font-semibold mb-4">Seven Lakes High School Tutor</h3>
+                <h3 class="text-2xl font-semibold">Texas A&M Peer Mentor</h3>
+                <p><b>Programs: </b> ESBP, VIP, <a href="https://engineering.tamu.edu/student-life/seas/fgen/index.html" target="_blank" rel="noopener noreferrer">FGEn</a></p>
+                <p>
+                    Since July 2023, mentor incoming/first-year engineering students across multiple programs (summer bridge, virtual Python intro, first-gen support). Focus on adapting to university life, core concepts, navigating resources, and promoting work-life balance.
+                </p>
+            </div>
 
-                    <p style="margin-bottom: 0;"><b>Programs: </b>
-                        <ul>
-                            <li>
-                                <a href="https://www.uiltexas.org/academics/stem/computer-science" target="_blank" rel="noopener noreferrer">UIL Computer Science</a>
-                            </li>
-                            <li>
-                                <a href="https://mualphatheta.org/about-us" target="_blank" rel="noopener noreferrer">Mu Alpha Theta</a>
-                            </li>
-                        </ul>
-                        </p>
-                    <p>
-                        While in high school, I joined two clubs, UIL Computer Science and Mu Alpha Thea, to pursue my passions of coding and mathematics respectively. Although I initially joined to just be a member, I ended up being a tutor as well. For UIL Computer Science, I helped those new to programming with their <b>AP Computer Science A</b> class and those more experienced with <b>data structures and algorithms</b>. For Mu Alpha Theta, I <b>tutored geometry, algebra, pre-calculus, and calculus</b> (for both AP Calculus AB and AP Calculus BC).
-                    </p>
-                    <p>
-                        Though I began tutoring in middle school, my experiences with these two clubs marked my first formal foray into teaching. It was these experiences that truly solidified and amplified my love for teaching; nothing made me happier than seeing my friends finally grasp a concept or complete a challenging homework problem. For the first time, I understood <b>learning as a journey rather than just a means to an end</b>, and I have since committed to dedicating my life to showing students the wonders of learning.
-                    </p>
-                </div>
+            <div class="teaching-card">
+                 <h3 class="text-2xl font-semibold">High School Tutor (SLHS)</h3>
+                <p><b>Clubs: </b> <a href="https://www.uiltexas.org/academics/stem/computer-science" target="_blank" rel="noopener noreferrer">UIL CS</a>, <a href="https://mualphatheta.org/about-us" target="_blank" rel="noopener noreferrer">Mu Alpha Theta</a></p>
+                <p>
+                    Tutored AP Computer Science A, data structures/algorithms, geometry, algebra, pre-calculus, and AP Calculus (AB/BC). Solidified passion for teaching and understanding learning as a journey.
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- Footer Section -->
-    <footer class="text-white py-4 mt- w-full">
-        <div class="container mx-auto text-center">
+    <footer class="text-white py-4 mt-8 w-full"> <div class="container mx-auto text-center px-4">
             <p class="text-sm">
-                © 2024 Anthony Ha-Anh Pham. All rights reserved.
+                © 2025 Anthony Ha-Anh Pham. All rights reserved.
             </p>
             <p class="text-sm">
-                Website source code available on 
+                Website source code available on
                 <a href="https://github.com/RicePandaaaa/ricepandaaaa.github.io" target="_blank" rel="noopener noreferrer">
                     GitHub
                 </a>
@@ -225,9 +230,5 @@
         </div>
     </footer>
 
-    <!-- JS scripts -->
-    <script src="scripts.js"></script>
-
-</body>
-
+    </body>
 </html>

@@ -1,30 +1,116 @@
 /*******************
- * Section Styling *
+ * Global Styling *
  *******************/
 
-.project-card a{
-    color: #99ddf7;
+ body {
+    background-color: #130857;
+    color: #FFFFFF;
 }
 
-#about, #projects, #teachers {
-    background-color: #4830CB;
-    background-image: radial-gradient(circle, #9281ee, transparent 11%);
-    background-size: 10px 10px;
+/* General Link Styling */
+a {
+    color: #77BBD5; /* Default link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #99ddf7; /* Link hover color */
+}
+
+/* Italic Styling */
+.italic {
+    font-style: italic;
+    color: #d3d3d3;
+}
+
+/***********************
+ * Section Backgrounds *
+ ***********************/
+
+/* Sections with darker dotted background */
+#intro, #projects-banner, #teachers-banner, footer {
+    background-color: #130857; /* Ensure base color is set if gradient fails */
+}
+
+/* Sections with lighter dotted background */
+#about, #projects, #teachers, #tech-logos {
+    background-color: #4830CB; /* Ensure base color is set if gradient fails */
+}
+
+/************************
+ * Individual Sections *
+ ************************/
+
+#intro img.profile-picture { /* Profile image */
+    border: 4px solid white;
+}
+#intro .flex a img { /* Social icons */
+    transition: transform 0.3s ease;
+}
+#intro .flex a:hover img {
+    transform: scale(1.1); /* Slight zoom effect on hover */
 }
 
 
-/*************************************
- * Project and Teaching Card Styling *
- *************************************/
+
+#tech-logos .container div { /* Targeting the flex container for logos */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem; /* Spacing between logos */
+}
+
+.tech-logo {
+    height: 60px; /* Adjust size as needed */
+    width: auto; /* Maintain aspect ratio */
+    /* margin: 10px; Removed in favor of gap */
+    transition: transform 0.2s ease-in-out;
+}
+
+.tech-logo:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+
+
+/* Project and Teaching Grid/Card Styling */
+#projects .container,
+#teachers .container {
+    display: grid;
+    gap: 1.5rem; /* Adjust gap between cards */
+    padding-left: 1rem; /* Add padding on sides */
+    padding-right: 1rem;
+
+    /* Default: 1 column */
+    grid-template-columns: repeat(1, 1fr);
+}
+
+/* Medium screens: 2 columns */
+@media (min-width: 768px) { /* Tailwind's 'md' breakpoint */
+    #projects .container,
+    #teachers .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Large screens: 3 columns */
+@media (min-width: 1024px) { /* Tailwind's 'lg' breakpoint */
+    #projects .container,
+    #teachers .container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 
 .project-card, .teaching-card {
     background-color: #241968;
     color: #FFFFFF;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
-    overflow: hidden;
-    max-width: 100%;
+    overflow: hidden; /* Important for aspect-ratio and border-radius */
     transition: transform 0.3s ease;
+    padding: 1.5rem; /* Padding inside the card */
 }
 
 .project-card:hover, .teaching-card:hover {
@@ -33,94 +119,44 @@
 
 .project-card h3, .teaching-card h3 {
     color: #FFFFFF;
+    margin-bottom: 0.5rem;
+    flex-shrink: 0; /* Prevent title from shrinking */
 }
 
-.project-card p, .teaching-card p {
+/* Content within cards */
+.project-card p, .teaching-card p,
+.project-card ul, .teaching-card ul {
     color: #E0E0E0;
-    margin-bottom: 1rem;
-    line-height: 1.75;
+    margin-bottom: 0.5rem;
+    line-height: 1.5; /* Adjusted line height */
+    flex-grow: 1; /* Allow text content to expand */
+    overflow-y: auto; /* Add scroll if content overflows */
+    font-size: 0.9rem; /* Adjust font size for better fit */
+    scrollbar-width: thin; /* Optional: Style scrollbar */
+    scrollbar-color: #9281ee #241968; /* Optional: Style scrollbar */
 }
 
-.project-card p.italic, .teaching-card p.italic {
-    font-style: italic;
-    color: #d3d3d3;
+.project-card ul, .teaching-card ul {
+    list-style: disc; /* Add bullet points */
+    padding-left: 1.5rem; /* Indent list */
+    margin-top: 0.5rem; /* Space above list */
 }
 
-.project-card a, .teaching-card a, footer a{
-    color: #77BBD5;
+/* Links specifically within cards */
+.project-card a, .teaching-card a {
+    color: #77BBD5; /* Use default link color or specify */
+    font-weight: bold; /* Make links stand out */
 }
 
-.project-card a:hover, .teaching-card a:hover, footer a:hover {
-    color: #99ddf7;
-}
-
-/****************** 
- * Header Styling *
- ******************/
-header {
-    background-color: #000000;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    width: 100%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+.project-card a:hover, .teaching-card a:hover {
+    color: #99ddf7; /* Use default hover or specify */
 }
 
 
-#menu, #mobile-menu {
-    background-color: #000000;
-}
-
-
-@media (min-width: 768px) {
-    #menu {
-        display: flex; /* Show the regular menu on screens wider than 768px */
-    }
-
-    #mobile-menu {
-        display: none; /* Ensure the mobile menu remains hidden on larger screens */
-    }
-}
-
-.hidden {
-    display: none;
-}
-
-@media (min-width: 1536px) {
-    .container {
-        max-width: 100%; /* Override to ensure full width */
-    }
-}
-
-#mobile-menu a:hover {
-    background-color: #2a2c2c;
-    color: #df1010;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/****************
-* Uncategorized *
-*****************/
-
-body, #projects-banner, #teachers-banner, footer {
-    background-color: #130857;
-    background-image: radial-gradient(circle, #4830CB, transparent 11%);
-    background-size: 10px 10px;
-}
-
-/*Border between nav bar and menu popup*/
-.border-line {
-    height: 2px;
-    background-color: white;
-    margin-bottom: 0px;
-}
-
-/* Compensation for sticky header */
-html {
-    scroll-padding-top: 80px;
-}
-
-.active {
-    color: #9281ee;
-    font-weight: bold;
+/* Footer Section */
+footer {
+    /* Styles */
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 2rem; /* Ensure space above footer */
 }
