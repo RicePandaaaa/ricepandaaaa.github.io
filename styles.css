@@ -7,18 +7,16 @@
     color: #FFFFFF;
 }
 
-/* General Link Styling */
 a {
-    color: #77BBD5; /* Default link color */
-    text-decoration: none; /* Remove underline */
+    color: #77BBD5;
+    text-decoration: none;
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #99ddf7; /* Link hover color */
+    color: #99ddf7;
 }
 
-/* Italic Styling */
 .italic {
     font-style: italic;
     color: #d3d3d3;
@@ -30,12 +28,12 @@ a:hover {
 
 /* Sections with darker dotted background */
 #intro, #projects-banner, #teachers-banner, footer {
-    background-color: #2F3A4C; /* Ensure base color is set if gradient fails */
+    background-color: #2F3A4C;
 }
 
 /* Sections with lighter dotted background */
-#about, #projects, #teachers /* Removed #tech-logos */ {
-    background-color: #596B84; /* Ensure base color is set if gradient fails */
+#about, #projects, #teachers {
+    background-color: #596B84;
 }
 
 /************************
@@ -44,72 +42,66 @@ a:hover {
 
 /* --- Start: New Intro Section Layout --- */
 #intro {
-    /* Base styles for the section */
-    background-color: #1F2A3C; /* Ensure background is set */
+    background-color: #1F2A3C;
 }
 
 .intro-container {
     display: flex;
-    flex-direction: column; /* Stack columns by default (mobile) */
-    align-items: center; /* Center items vertically on mobile */
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Styles for medium screens and up (md: breakpoint, 768px) */
 @media (min-width: 768px) {
     .intro-container {
         max-width: 100%;
-        flex-direction: row; /* Arrange columns side-by-side */
-        align-items: center; /* Align items to the top */
-        justify-content: center; /* Optional: Adjust spacing */
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
     }
 
     .intro-left {
-        /* Widths are set via Tailwind classes (md:w-2/5 lg:w-1/3) */
-        text-align: left; /* Align text left */
-        margin-bottom: 0; /* Remove bottom margin added by stacking */
-        padding-right: 2rem; /* Space between columns */
+        text-align: left;
+        margin-bottom: 0;
+        padding-right: 2rem;
     }
 
     .intro-left img.profile-picture {
-        margin-left: 0; /* Override mx-auto */
-        margin-right: 0; /* Override mx-auto */
+        margin-left: 0;
+        margin-right: 0;
     }
 
-    .intro-left .flex { /* Targeting social icons container */
-        justify-content: flex-start; /* Align icons left */
+    .intro-left .flex {
+        justify-content: flex-start;
     }
 
     .intro-right {
-        /* Widths are set via Tailwind classes (md:w-3/5 lg:w-2/3) */
-        margin-top: 0; /* Remove top margin added by stacking */
-        text-align: left; /* Align text left */
-        padding-left: 2rem; /* Space between columns */
-        display: flex; /* Use flexbox for vertical spacing */
+        margin-top: 0;
+        text-align: left;
+        padding-left: 2rem;
+        display: flex;
         flex-direction: column;
-        justify-content: space-between; /* Space out quote and tech */
-        height: 100%; /* Allow flexbox to distribute space */
+        justify-content: space-between;
+        height: 100%;
     }
 
     .intro-quote, .intro-tech {
-        text-align: left; /* Align content left */
+        text-align: left;
     }
 
      .intro-quote p {
-        margin-left: 0; /* Override mx-auto */
-        margin-right: 0; /* Override mx-auto */
+        margin-left: 0;
+        margin-right: 0;
      }
 
-    .intro-tech .flex { /* Targeting tech logo container */
-        justify-content: flex-start; /* Align logos left */
+    .intro-tech .flex {
+        justify-content: flex-start;
     }
 }
 
-/* Ensure existing profile picture styles apply */
 #intro img.profile-picture {
     border: 4px solid white;
 }
 
-/* Ensure existing social icon styles apply */
 #intro .flex a img {
     transition: transform 0.3s ease;
 }
@@ -117,12 +109,8 @@ a:hover {
     transform: scale(1.1);
 }
 
-/* Style the new headings within intro-right */
 .intro-quote h2, .intro-tech h2 {
-    color: #FFFFFF; /* Or another suitable color */
-    /* font-size: 1.875rem; /* text-3xl */
-    /* font-weight: 600; /* font-semibold */
-    /* margin-bottom: 1rem; /* mb-4 or mb-8 */
+    color: #FFFFFF;
 }
 
 /* --- End: New Intro Section Layout --- */
@@ -130,37 +118,33 @@ a:hover {
 
 /* Tech Logo styles (now inside Intro) */
 .tech-logo {
-    height: 55px; /* Maybe slightly smaller in this layout */
-    width: auto; /* Maintain aspect ratio */
+    height: 55px;
+    width: auto;
     transition: transform 0.2s ease-in-out;
 }
 
 .tech-logo:hover {
-    transform: scale(1.1); /* Slight zoom effect on hover */
+    transform: scale(1.1);
 }
 
 /* Project and Teaching Grid/Card Styling */
 #projects .container,
 #teachers .container {
     display: grid;
-    gap: 1.5rem; /* Adjust gap between cards */
-    padding-left: 1rem; /* Add padding on sides */
+    gap: 1.5rem;
+    padding-left: 1rem;
     padding-right: 1rem;
-
-    /* Default: 1 column */
     grid-template-columns: repeat(1, 1fr);
 }
 
-/* Medium screens: 2 columns */
-@media (min-width: 768px) { /* Tailwind's 'md' breakpoint */
+@media (min-width: 768px) {
     #projects .container,
     #teachers .container {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* Large screens: 3 columns */
-@media (min-width: 1024px) { /* Tailwind's 'lg' breakpoint */
+@media (min-width: 1024px) {
     #projects .container,
     #teachers .container {
         grid-template-columns: repeat(3, 1fr);
@@ -172,10 +156,10 @@ a:hover {
     color: #FFFFFF;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
-    overflow: hidden; /* Keep to respect border-radius */
+    overflow: hidden;
     transition: transform 0.3s ease;
-    padding: 1.5rem; /* Padding inside the card */
-    min-height: 150px; /* Optional: Ensure minimum height */
+    padding: 1.5rem;
+    min-height: 150px;
 }
 
 .project-card:hover, .teaching-card:hover {
@@ -185,7 +169,6 @@ a:hover {
 .project-card h3, .teaching-card h3 {
     color: #FFFFFF;
     margin-bottom: 0.5rem;
-    /* flex-shrink: 0; <-- Removed */
 }
 
 /* Content within cards */
@@ -195,7 +178,6 @@ a:hover {
     margin-bottom: 0.5rem;
     line-height: 1.5;
     font-size: 0.9rem;
-     /* Removed flex-grow and overflow-y */
 }
 
 .project-card ul, .teaching-card ul {
@@ -218,5 +200,5 @@ a:hover {
 footer {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    margin-top: 2rem; /* Ensure space above footer */
+    margin-top: 2rem;
 }
