@@ -4,28 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anthony Ha-Anh Pham</title>
+    <meta name="description" content="Anthony Ha-Anh Pham — graduate student at Texas A&M University working at the intersection of software, hardware, and engineering education.">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
     <link rel="manifest" href="assets/icons/site.webmanifest">
 </head>
-<body>
-    <section class="full-screen-intro gradient-darker-bg text-white">
+<body class="text-white">
+    <!-- Navigation -->
+    <nav class="site-nav">
+        <div class="container mx-auto max-w-6xl px-4 h-14 flex items-center justify-between">
+            <a href="#" class="font-semibold tracking-tight text-white hover:text-accent">Anthony Ha-Anh Pham</a>
+            <div class="flex items-center gap-6 text-sm text-gray-300">
+                <a href="#projects" class="hover:text-white">Projects</a>
+                <a href="#research" class="hover:text-white">Research</a>
+                <a href="#teaching" class="hover:text-white">Teaching</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Intro -->
+    <section class="py-16 md:py-24 px-4">
         <div class="container mx-auto max-w-6xl">
-            <div class="text-center">
-                <!-- Profile Section -->
-                <div class="mb-8">
-                    <img src="assets/headshot_zoomedin.png" alt="Anthony Ha-Anh Pham" 
+            <div class="flex flex-col md:flex-row gap-10 md:gap-16 items-center">
+                <!-- Left: Profile + Social Links -->
+                <div class="md:w-2/5 text-center flex-shrink-0">
+                    <img src="assets/headshot_zoomedin.png" alt="Anthony Ha-Anh Pham"
                          class="w-36 h-36 md:w-44 md:h-44 rounded-full mx-auto mb-4 border-4 border-white profile-glow">
-                    <h1 class="text-4xl md:text-6xl font-bold mb-4">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-3">
                         <span class="gradient-text">Anthony</span> Ha-Anh Pham
                     </h1>
-                    <p class="text-xl md:text-2xl mb-4 text-gray-300">Graduate Student, Engineer, & Teacher!</p>
-                    
+                    <p class="text-xl mb-2 text-gray-300">Graduate Student, Engineer, & Teacher</p>
+                    <p class="text-sm mb-6 text-gray-400">M.S. Engineering Technology · Texas A&M University</p>
+
                     <!-- Social Links -->
-                    <div class="flex justify-center space-x-6 mb-6">
+                    <div class="flex justify-center space-x-6">
                         <a href="https://github.com/RicePandaaaa" class="hover:scale-110 transition-transform" target="_blank">
                             <img src="assets/github-mark-white.png" alt="GitHub" class="w-8 h-8">
                         </a>
@@ -40,31 +58,33 @@
                         </a>
                     </div>
                 </div>
-                
-                <!-- Howdy Message -->
-                <div class="mb-8 max-w-3xl mx-auto">
-                    <h2 class="text-3xl font-semibold mb-3">Howdy! 👋</h2>
-                    <p class="text-lg md:text-xl leading-relaxed text-gray-300">
-                        I am pursuing a Masters of Science in Engineering Technology at Texas A&M University! My passions are in
-                        creating <span class="accent-text"><b><a href="#projects" class="hover:text-white">innovative solutions</a></b></span>
-                        that blend software and hardware to <span class="accent-text"><b><a href="#teaching" class="hover:text-white">transform education</a></b></span>!
-                    </p>
-                </div>
-                
-                <!-- Tech Stack Grid -->
-                <div class="max-w-5xl mx-auto">
-                    <h3 class="text-xl font-semibold mb-6">I use several technologies, including...</h3>
-                    <div class="tech-grid">
+
+                <!-- Right: Bio + Tech Stack -->
+                <div class="md:w-3/5">
+                    <!-- Howdy Message -->
+                    <div class="mb-8">
+                        <h2 class="text-3xl font-semibold mb-3">Howdy! 👋</h2>
+                        <p class="text-lg leading-relaxed text-gray-300">
+                            I am pursuing a Masters of Science in Engineering Technology at Texas A&M University. My passions are in
+                            creating <a href="#projects" class="accent-link">innovative solutions</a>
+                            that blend software and hardware to <a href="#teaching" class="accent-link">transform education</a>.
+                        </p>
+                    </div>
+
+                    <!-- Tech Stack Grid -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-6">I use several technologies, including...</h3>
+                        <div class="tech-grid">
                         <a href="https://www.python.org/" class="tech-card rounded-lg p-3 group" target="_blank">
                             <div class="h-16 flex items-center justify-center mb-2">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png" 
+                                <img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg"
                                      alt="Python" class="max-h-full w-auto group-hover:scale-110 transition-transform">
                             </div>
                             <p class="text-sm">Python</p>
                         </a>
                         <a href="https://devdocs.io/c/" class="tech-card rounded-lg p-3 group" target="_blank">
                             <div class="h-16 flex items-center justify-center mb-2">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/1962px-C_Programming_Language.svg.png" 
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg"
                                      alt="C" class="max-h-full w-auto group-hover:scale-110 transition-transform">
                             </div>
                             <p class="text-sm">C</p>
@@ -77,7 +97,7 @@
                         </a>
                         <a href="https://discordpy.readthedocs.io/" class="tech-card rounded-lg p-3 group" target="_blank">
                             <div class="h-16 flex items-center justify-center mb-2">
-                                <img src="https://raw.githubusercontent.com/python-discord/branding/main/logos/logo_circle/logo_circle.png" 
+                                <img src="https://raw.githubusercontent.com/python-discord/branding/main/logos/logo_circle/logo_circle.png"
                                      alt="discord.py" class="max-h-full w-auto group-hover:scale-110 transition-transform">
                             </div>
                             <p class="text-sm">discord.py</p>
@@ -107,196 +127,184 @@
                             <p class="text-sm">pandas</p>
                         </a>
                     </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-20 px-4 bg-gradient-to-b from-gray-800 to-gray-900">
+    <section id="projects" class="section-divider py-20 px-4">
         <div class="container mx-auto max-w-6xl">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 text-white">
-                <span class="gradient-text">Projects</span> & Designs
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-white">
+                Projects & Designs
             </h2>
-            <p class="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
-                Hands-on projects showcasing my passion for creating innovative solutions
-            </p>
-            
+
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="project-card rounded-xl overflow-hidden group">
+                <div class="project-card rounded-xl overflow-hidden">
                     <div class="project-header p-6 pb-4">
                         <div class="flex items-start justify-between">
                             <h3 class="text-xl font-bold text-white">Blood Glucose Monitor</h3>
                         </div>
-                        <p class="text-gray-300 text-sm mb-4">
-                            <b>August 2024 - May 2025</b>
-                        </p>
+                        <p class="text-gray-400 text-sm mb-4">August 2024 – May 2025</p>
                         <p class="text-gray-300 text-sm mb-4 mt-2">
-                            Lead software developer for senior year capstone project. 
+                            Lead software developer for a senior-year capstone project on non-invasive
+                            blood glucose monitoring using millimeter-wave sensing.
                             <br><br>
-                            <b>Designed and developed Android app</b> with Bluetooth Low Energy, 
-                            ESP32 firmware, and XGBoost ML model for glucose estimation. 
-                            <b>Developed firmware for ESP32</b> to interface with 
-                            NANO VNA and the Android app.
+                            Designed an Android app with Bluetooth Low Energy, wrote ESP32 firmware to
+                            interface with a NANO VNA, and built an XGBoost model to estimate glucose
+                            levels from RF signal data.
                         </p>
                     </div>
                     <div class="project-footer p-6 pt-0">
                         <div class="flex flex-wrap gap-2">
-                            <span class="project-tag">C</span>
-                            <span class="project-tag">Dart</span>
-                            <span class="project-tag">Python</span>
-                            <span class="project-tag">Flutter</span>
-                            <span class="project-tag">ESP-IDF</span>
+                            <span class="tag">C</span>
+                            <span class="tag">Dart</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Flutter</span>
+                            <span class="tag">ESP-IDF</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card rounded-xl overflow-hidden group">
+                <div class="project-card rounded-xl overflow-hidden">
                     <div class="project-header p-6 pb-4">
                         <div class="flex items-start justify-between">
                             <h3 class="text-xl font-bold text-white">Gesture</h3>
                             <div class="flex gap-2">
-                                <a href="https://github.com/AxeFontaine/tamuhack25" class="text-gray-400 hover:text-white transition" target="_blank">
+                                <a href="https://github.com/AxeFontaine/tamuhack25" class="text-gray-400 hover:text-white transition" target="_blank" aria-label="Gesture on GitHub">
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                                         <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                                     </svg>
                                 </a>
                             </div>
                         </div>
-                        <p class="text-gray-300 text-sm mb-4">
-                            <b>February 2025</b>
-                        </p>
+                        <p class="text-gray-400 text-sm mb-4">February 2025</p>
                         <p class="text-gray-300 text-sm mb-4 mt-2">
-                            One of four members of a team that developed a website for learning sign language using computer vision. Primarily responsible for the development of the sign detection model used in the backend.
+                            A web app that teaches sign language in real time using computer vision,
+                            built with a team of four during TAMUhack 2025, a 24-hour hackathon.
                             <br><br>
-                            Responsible for creating the <b>computer vision model and its training dataset</b>.
+                            Responsible for the full ML pipeline: collecting and labeling a custom
+                            dataset with MediaPipe hand landmarks, then training a TensorFlow
+                            classifier that recognizes ASL gestures live via webcam.
                         </p>
                     </div>
                     <div class="project-footer p-6 pt-0">
                         <div class="flex flex-wrap gap-2">
-                            <span class="project-tag">Python</span>
-                            <span class="project-tag">OpenCV</span>
-                            <span class="project-tag">TensorFlow</span>
-                            <span class="project-tag">MediaPipe</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">OpenCV</span>
+                            <span class="tag">TensorFlow</span>
+                            <span class="tag">MediaPipe</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card rounded-xl overflow-hidden group">
+                <div class="project-card rounded-xl overflow-hidden">
                     <div class="project-header p-6 pb-4">
                         <div class="flex items-start justify-between">
                             <h3 class="text-xl font-bold text-white">Bacon Hunter</h3>
                             <div class="flex gap-2">
-                                <a href="https://www.youtube.com/watch?v=gzB9bQtjUVA" class="text-gray-400 hover:text-white transition" target="_blank">
+                                <a href="https://www.youtube.com/watch?v=gzB9bQtjUVA" class="text-gray-400 hover:text-white transition" target="_blank" aria-label="Bacon Hunter demo video">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                                         <path d="M21.948 7.646a2.825 2.825 0 0 0-1.992-1.992C18.17 5.25 12 5.25 12 5.25s-6.17 0-7.956.404a2.825 2.825 0 0 0-1.992 1.992C2.05 9.479 2.05 12 2.05 12s0 2.521.404 4.354a2.825 2.825 0 0 0 1.992 1.992C5.83 18.75 12 18.75 12 18.75s6.17 0 7.956-.404a2.825 2.825 0 0 0 1.992-1.992C21.95 14.521 21.95 12 21.95 12s0-2.521-.002-4.354zM9.545 15.421V8.579L15.908 12l-6.363 3.421z"/>
                                         </svg>
                                 </a>
                             </div>
                         </div>
-                        <p class="text-gray-300 text-sm mb-4">
-                            <b>March 2024 - April 2024</b>
-                        </p>
+                        <p class="text-gray-400 text-sm mb-4">March 2024 – April 2024</p>
                         <p class="text-gray-300 text-sm mb-4 mt-2">
-                            One of four project members for an autonomous target-seeking 
-                            <span class="text-blue-400 text-sm hover:text-white transition">
-                                <a href="https://www.scuttlerobot.org/" target="_blank">
-                                    SCUTTLE
-                                </a>
-                            </span>
-                            robot for MXET 300 (Mechatronics I) class.
-
+                            An autonomous target-seeking
+                            <a href="https://www.scuttlerobot.org/" class="accent-link" target="_blank">SCUTTLE</a>
+                            robot built by a team of four for MXET 300 (Mechatronics I).
                             <br><br>
-                            Responsible for designing and implementing a <b>dynamic obstacle avoidance algorithm</b>, <b>autonomous navigation</b>, and <b>target detection</b> using HSV filter.
+                            Designed and implemented the dynamic obstacle avoidance algorithm, the
+                            autonomous navigation logic, and real-time target detection using HSV
+                            color filtering in OpenCV.
                         </p>
                     </div>
                     <div class="project-footer p-6 pt-0">
                         <div class="flex flex-wrap gap-2">
-                            <span class="project-tag">Python</span>
-                            <span class="project-tag">OpenCV</span>
-                            <span class="project-tag">Arduino</span>
-                            <span class="project-tag">Raspberry Pi</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">OpenCV</span>
+                            <span class="tag">Arduino</span>
+                            <span class="tag">Raspberry Pi</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card rounded-xl overflow-hidden group">
+                <div class="project-card rounded-xl overflow-hidden">
                     <div class="project-header p-6 pb-4">
                         <div class="flex items-start justify-between">
                             <h3 class="text-xl font-bold text-white">TAO Bot</h3>
                             <div class="flex gap-2">
-                                <a href="https://github.com/RicePandaaaa/TAO-Bot" class="text-gray-400 hover:text-white transition" target="_blank">
+                                <a href="https://github.com/RicePandaaaa/TAO-Bot" class="text-gray-400 hover:text-white transition" target="_blank" aria-label="TAO Bot on GitHub">
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                                         <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                                     </svg>
                                 </a>
                             </div>
                         </div>
-                        <p class="text-gray-300 text-sm mb-4">
-                            <b>August 2023 - Present</b>
-                        </p>
+                        <p class="text-gray-400 text-sm mb-4">August 2023 – Present</p>
                         <p class="text-gray-300 text-sm mb-4 mt-2">
-                            Creator and lead maintainer of the <b>Discord bot</b> managing ENGR TA Organization server. 
+                            Creator and lead maintainer of the Discord bot managing the ENGR TA
+                            Organization server at Texas A&M.
                             <br><br>
-                            Serves 5,000+ faculty, TAs, and students with custom commands and automated management.
+                            Serves 5,000+ faculty, TAs, and students with custom commands, automated
+                            role and membership management, and moderation tools.
                         </p>
                     </div>
                     <div class="project-footer p-6 pt-0">
                         <div class="flex flex-wrap gap-2">
-                            <span class="project-tag">Python</span>
-                            <span class="project-tag">discord.py</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">discord.py</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card rounded-xl overflow-hidden group">
+                <div class="project-card rounded-xl overflow-hidden">
                     <div class="project-header p-6 pb-4">
                         <div class="flex items-start justify-between">
                             <h3 class="text-xl font-bold text-white">ASL Detection Model</h3>
                             <div class="flex gap-2">
-                                <a href="https://github.com/RicePandaaaa/ASL-RNN-ApplyAI" class="text-gray-400 hover:text-white transition" target="_blank">
+                                <a href="https://github.com/RicePandaaaa/ASL-RNN-ApplyAI" class="text-gray-400 hover:text-white transition" target="_blank" aria-label="ASL Detection Model on GitHub">
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                                         <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                                     </svg>
                                 </a>
                             </div>
                         </div>
-                        <p class="text-gray-300 text-sm mb-4">
-                            <b>February 2023 - April 2023</b>
-                        </p>
+                        <p class="text-gray-400 text-sm mb-4">February 2023 – April 2023</p>
                         <p class="text-gray-300 text-sm mb-4 mt-2">
-                            Lead developer for my group in AI4ALL Apply AI's Spring 2023 cohort, creating <b>recurrent neural networks (RNNs)</b> to detect five American Sign Language (ASL) words.
+                            Lead developer for my group in AI4ALL Apply AI's Spring 2023 cohort,
+                            building recurrent neural networks to recognize five American Sign
+                            Language words from video sequences.
                             <br><br>
-                            Includes six versions of a RNN, each with different hyperparameters. Data is found in the 
-                            <span class="text-blue-400 text-sm hover:text-white transition">
-                                <a href="https://www.kaggle.com/competitions/asl-signs/overview" target="_blank">Kaggle ASL Challenge</a>
-                            </span>
+                            Iterated on six LSTM variants with different hyperparameters, trained on the
+                            <a href="https://www.kaggle.com/competitions/asl-signs/overview" class="accent-link" target="_blank">Kaggle ASL Signs Challenge</a>
+                            dataset.
                         </p>
                     </div>
                     <div class="project-footer p-6 pt-0">
                         <div class="flex flex-wrap gap-2">
-                            <span class="project-tag">Python</span>
-                            <span class="project-tag">Keras</span>
-                            <span class="project-tag">TensorFlow</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Keras</span>
+                            <span class="tag">TensorFlow</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <!-- Research Section -->
-    <section id="research" class="py-20 px-4 gradient-darker-bg">
+    <section id="research" class="section-divider py-20 px-4">
         <div class="container mx-auto max-w-6xl">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 text-white">
-                <span class="gradient-text">Research</span> Experience
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-white">
+                Research Experience
             </h2>
-            <p class="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
-                Exploring the technology, education, and their intersection through hands-on research
-            </p>
-            
+
             <!-- Research Timeline/Feature Card -->
-            <div class="max-w-4xl mx-auto mb-3">
+            <div class="max-w-6xl mx-auto mb-6">
                 <div class="research-feature-card rounded-2xl p-8 md:p-12">
                     <div class="flex flex-col md:flex-row gap-8 items-start">
                         <div class="md:w-1/3">
@@ -305,10 +313,10 @@
                             <p class="text-gray-400 text-sm">MiWiRa Lab</p>
                             <p class="text-gray-400 text-sm mb-4">January 2024 - Present</p>
                             <div class="flex flex-wrap gap-2">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">XGBoost</span>
-                                <span class="tech-tag">mmWave Radar</span>
-                                <span class="tech-tag">Deep Learning</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">XGBoost</span>
+                                <span class="tag">mmWave Radar</span>
+                                <span class="tag">Deep Learning</span>
                             </div>
                         </div>
                         <div class="md:w-2/3">
@@ -337,7 +345,7 @@
                     </div>
                 </div>
             </div>
-            <div class="max-w-4xl mx-auto mb-3"> 
+            <div class="max-w-6xl mx-auto mb-6">
                 <div class="research-feature-card rounded-2xl p-8 md:p-12">
                     <div class="flex flex-col md:flex-row gap-8 items-start">
                         <div class="md:w-1/3">
@@ -346,16 +354,16 @@
                             <p class="text-gray-400 text-sm">ENQUIRE Lab</p>
                             <p class="text-gray-400 text-sm mb-4">August 2024 - Present</p>
                             <div class="flex flex-wrap gap-2">
-                                <span class="tech-tag">Engineering Education</span>
-                                <span class="tech-tag">Machine Learning</span>
-                                <span class="tech-tag">LLMs</span>
-                                <span class="tech-tag">Qualitative Research</span>
+                                <span class="tag">Engineering Education</span>
+                                <span class="tag">Machine Learning</span>
+                                <span class="tag">LLMs</span>
+                                <span class="tag">Qualitative Research</span>
                             </div>
                         </div>
                         <div class="md:w-2/3">
                             <h4 class="text-xl font-semibold text-white mb-4">Project Overview</h4>
                             <p class="text-gray-300 mb-6">
-                                I develop tools and pipelines that utiilize generative AI to analyze engineering curricula data to better understand the decision processes behind curricula development and their motivations.
+                                I develop tools and pipelines that utilize generative AI to analyze engineering curricula data to better understand the decision processes behind curricula development and their motivations.
                             </p>
                             <h4 class="text-xl font-semibold text-white mb-4">Contributions</h4>
                             <ul class="space-y-2 text-gray-300">
@@ -372,19 +380,19 @@
                     </div>
                 </div>
             </div>
-            <div class="max-w-4xl mx-auto">
+            <div class="max-w-6xl mx-auto">
                 <div class="research-feature-card rounded-2xl p-8 md:p-12">
                     <div class="flex flex-col md:flex-row gap-8 items-start">
                         <div class="md:w-1/3">
 
                             <h3 class="text-2xl font-bold text-white mb-2">Children's Achievement Attitudes and Beliefs</h3>
                             <p class="text-gray-400 text-sm">Texas A&M University</p>
-                            <p class="text-gray-400 text-sm"><a href="https://beam.tamu.edu/" class="text-accent hover:text-white transition">BEAM Lab</a></p>
+                            <p class="text-gray-400 text-sm"><a href="https://beam.tamu.edu/" class="accent-link" target="_blank">BEAM Lab</a></p>
                             <p class="text-gray-400 text-sm mb-4">January 2022 - February 2023</p>
                             <div class="flex flex-wrap gap-2">
-                                <span class="tech-tag">Children</span>
-                                <span class="tech-tag">Psychology</span>
-                                <span class="tech-tag">Data Collection</span>
+                                <span class="tag">Children</span>
+                                <span class="tag">Psychology</span>
+                                <span class="tag">Data Collection</span>
                             </div>
                         </div>
                         <div class="md:w-2/3">
@@ -412,139 +420,121 @@
     </section>
 
     <!-- Teaching Section -->
-    <section id="teaching" class="py-20 px-4 bg-gradient-to-b from-gray-800 to-gray-900">
+    <section id="teaching" class="section-divider py-20 px-4">
         <div class="container mx-auto max-w-6xl">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 text-white">
-                <span class="gradient-text">Teaching</span> & Mentorship
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-white">
+                Teaching & Mentorship
             </h2>
-            <p class="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
-                Empowering students through innovative teaching methods and accessible online content
-            </p>
-            
-            <!-- Teaching Tabs -->
-            <div class="max-w-5xl mx-auto">
-                <div class="flex flex-wrap justify-center gap-4 mb-8">
-                    <button class="tab-button active" onclick="showTab('positions')">Teaching Positions</button>
-                    <button class="tab-button" onclick="showTab('youtube')">YouTube Content</button>
-                </div>
-                
-                <!-- Teaching Positions Tab -->
-                <div id="positions-tab" class="tab-content">
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div class="teaching-card rounded-xl p-6">
-                            <h3 class="text-2xl font-bold text-white mb-2">Graduate Assistant Teacher - Canvas Manager</h3>
-                            <p class="text-gray-300 text-sm">Masters of Industrial Distribution @ Texas A&M</p>
-                            <p class="text-gray-300 text-sm mb-4">January 2026 - Present</p>
-                            <p class="text-gray-100 mb-4">
-                                Assistant in creating course frameworks and updating course materials on Canvas for the Masters of Industrial Distribution program. Also, I ensured that all course materials were fully compliant with accessibility standards.
-                            </p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="skill-tag">Canvas</span>
-                                <span class="skill-tag">Accessibility</span>
-                                <span class="skill-tag">Course Development</span>
-                            </div>
-                        </div>
 
-                        <div class="teaching-card rounded-xl p-6">
-                            <h3 class="text-2xl font-bold text-white mb-2">Freshman Engineering Peer Teacher</h3>
-                            <p class="text-gray-300 text-sm">Texas A&M First Year Engineering</p>
-                            <p class="text-gray-300 text-sm mb-4">August 2022 - May 2025</p>
-                            <p class="text-gray-100 mb-4">
-                                Peer teacher for four different courses (ENGR 102, PHYS 216, CLEN 261, CLEN 181). I helped with students with their coursework and 
-                                prepared them for their futures as engineers and as students. I provided office hours, created supplemental learning materials, and 
-                                managed a Discord server for the courses.
-                            </p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="skill-tag">Python</span>
-                                <span class="skill-tag">Physics</span>
-                                <span class="skill-tag">Teaching</span>
-                            </div>
+            <div class="max-w-6xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="teaching-card rounded-xl p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Graduate Assistant Teacher - Canvas Manager</h3>
+                        <p class="text-gray-300 text-sm">Masters of Industrial Distribution @ Texas A&M</p>
+                        <p class="text-gray-400 text-sm mb-4">January 2026 - Present</p>
+                        <p class="text-gray-100 mb-4">
+                            Assistant in creating course frameworks and updating course materials on Canvas for the Masters of Industrial Distribution program. Also, I ensured that all course materials were fully compliant with accessibility standards.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag">Canvas</span>
+                            <span class="tag">Accessibility</span>
+                            <span class="tag">Course Development</span>
                         </div>
-                    
-                        <div class="teaching-card rounded-xl p-6">
-                            <h3 class="text-2xl font-bold text-white mb-2">SEAS Peer Mentor</h3>
-                            <p class="text-gray-300 text-sm">Student Excellence and Academic Success @ Texas A&M</p>
-                            <p class="text-gray-300 text-sm mb-4">August 2024 - May 2025</p>
-                            <p class="text-gray-100 mb-4">
-                                Peer mentor for current first-year, first-generation engineering students. I provided guidance and support to
-                                help them succeed in their first year at Texas A&M acadmically, socially, and emotionally.
-                            </p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="skill-tag">Engineering</span>
-                                <span class="skill-tag">First-Year Students</span>
-                                <span class="skill-tag">Mentorship</span>
-                            </div>
-                        </div>
+                    </div>
 
-                        <div class="teaching-card rounded-xl p-6">
-                            <h3 class="text-2xl font-bold text-white mb-2">ESBP Peer Mentor</h3>
-                            <p class="text-gray-300 text-sm">Engineering Summer Bridge Program @ Texas A&M</p>
-                            <p class="text-gray-300 text-sm mb-4">Summer 2023, Summer 2024</p>
-                            <p class="text-gray-100 mb-4">
-                                Peer mentor for incoming engineering students through the Engineering Summer Bridge Program. I assisted them with preparation for 
-                                their Math Placement Exam and for their first year at Texas A&M with a focus on academic success and work-life balance.
-                            </p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="skill-tag">Pre-Calculus</span>
-                                <span class="skill-tag">Life on Campus</span>
-                                <span class="skill-tag">Mentorship</span>
-                            </div>
+                    <div class="teaching-card rounded-xl p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Freshman Engineering Peer Teacher</h3>
+                        <p class="text-gray-300 text-sm">Texas A&M First Year Engineering</p>
+                        <p class="text-gray-400 text-sm mb-4">August 2022 - May 2025</p>
+                        <p class="text-gray-100 mb-4">
+                            Peer teacher for four different courses (ENGR 102, PHYS 216, CLEN 261, CLEN 181). I helped students with their coursework and
+                            prepared them for their futures as engineers and as students. I provided office hours, created supplemental learning materials, and
+                            managed a Discord server for the courses.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag">Python</span>
+                            <span class="tag">Physics</span>
+                            <span class="tag">Teaching</span>
                         </div>
+                    </div>
 
-                        <div class="teaching-card rounded-xl p-6">
-                            <h3 class="text-2xl font-bold text-white mb-2">VIP Peer Mentor</h3>
-                            <p class="text-gray-300 text-sm">Virtual Introduction to Python @ Texas A&M</p>
-                            <p class="text-gray-300 text-sm mb-4">Summer 2023, Summer 2024</p>
-                            <p class="text-gray-100 mb-4">
-                                Peer mentor for incoming engineering students. I assisted them with getting a solid foundation in Python in 
-                                preparation for one of their core first-year courses, ENGR 102.
-                            </p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="skill-tag">Python</span>
-                                <span class="skill-tag">Mentorship</span>
-                            </div>
+                    <div class="teaching-card rounded-xl p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">SEAS Peer Mentor</h3>
+                        <p class="text-gray-300 text-sm">Student Excellence and Academic Success @ Texas A&M</p>
+                        <p class="text-gray-400 text-sm mb-4">August 2024 - May 2025</p>
+                        <p class="text-gray-100 mb-4">
+                            Peer mentor for current first-year, first-generation engineering students. I provided guidance and support to
+                            help them succeed in their first year at Texas A&M academically, socially, and emotionally.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag">Engineering</span>
+                            <span class="tag">First-Year Students</span>
+                            <span class="tag">Mentorship</span>
                         </div>
+                    </div>
 
+                    <div class="teaching-card rounded-xl p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">ESBP Peer Mentor</h3>
+                        <p class="text-gray-300 text-sm">Engineering Summer Bridge Program @ Texas A&M</p>
+                        <p class="text-gray-400 text-sm mb-4">Summer 2023, Summer 2024</p>
+                        <p class="text-gray-100 mb-4">
+                            Peer mentor for incoming engineering students through the Engineering Summer Bridge Program. I assisted them with preparation for
+                            their Math Placement Exam and for their first year at Texas A&M with a focus on academic success and work-life balance.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag">Pre-Calculus</span>
+                            <span class="tag">Life on Campus</span>
+                            <span class="tag">Mentorship</span>
+                        </div>
+                    </div>
+
+                    <div class="teaching-card rounded-xl p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">VIP Peer Mentor</h3>
+                        <p class="text-gray-300 text-sm">Virtual Introduction to Python @ Texas A&M</p>
+                        <p class="text-gray-400 text-sm mb-4">Summer 2023, Summer 2024</p>
+                        <p class="text-gray-100 mb-4">
+                            Peer mentor for incoming engineering students. I assisted them with getting a solid foundation in Python in
+                            preparation for one of their core first-year courses, ENGR 102.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag">Python</span>
+                            <span class="tag">Mentorship</span>
+                        </div>
                     </div>
                 </div>
-                
-                <!-- YouTube Content Tab -->
-                <div id="youtube-tab" class="tab-content hidden">
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div class="youtube-card rounded-xl overflow-hidden">
-                            <div class="bg-gray-700 h-48 flex items-center justify-center">
-                                <div class="text-6xl">💻</div>
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold text-white mb-2">ENGR 102 Review Series</h3>
-                                <p class="text-gray-300 mb-4">
-                                    Comprehensive exam reviews for ENGR 102. Consists mostly of solving problem sets provided 
-                                    by the professors.
-                                </p>
-                                <div class="flex items-center justify-between">
-                                    <span class="text-gray-300 text-sm">6 videos</span>
-                                    <a href="https://www.youtube.com/playlist?list=PLISyINFRGf7ZQ6jvPNtmXOIR4q-9UGYE8" target="_blank">
-                                        <span class="text-blue-400 text-sm hover:text-white transition">Watch Series →</span>
-                                    </a>    
-                                </div>
+
+                <!-- YouTube Series -->
+                <h3 class="text-2xl font-bold text-white mt-16 mb-6">YouTube Series</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="youtube-card rounded-xl overflow-hidden">
+                        <a href="https://www.youtube.com/playlist?list=PLISyINFRGf7ZQ6jvPNtmXOIR4q-9UGYE8" target="_blank">
+                            <img src="https://i.ytimg.com/vi/I198gkjpnqE/hqdefault.jpg" alt="ENGR 102 Review Series thumbnail" class="youtube-thumb">
+                        </a>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">ENGR 102 Review Series</h3>
+                            <p class="text-gray-300 mb-4">
+                                Comprehensive exam reviews for ENGR 102. Consists mostly of solving problem sets provided
+                                by the professors.
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-400 text-sm">6 videos</span>
+                                <a href="https://www.youtube.com/playlist?list=PLISyINFRGf7ZQ6jvPNtmXOIR4q-9UGYE8" target="_blank" class="accent-link text-sm">Watch Series →</a>
                             </div>
                         </div>
-                        
-                        <div class="youtube-card rounded-xl overflow-hidden">
-                            <div class="bg-gray-700 h-48 flex items-center justify-center">
-                                <div class="text-6xl">🎥</div>
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold text-white mb-2">ESBP 2024 - Pre-Calculus Series</h3>
-                                <p class="text-gray-300 mb-4">
-                                    Mini lecture series for key pre-calculus concepts, tailored for ESBP students.
-                                </p>
-                                <div class="flex items-center justify-between">
-                                    <span class="text-gray-300 text-sm">19 videos</span>
-                                    <a href="https://www.youtube.com/playlist?list=PLISyINFRGf7an5UwX27hjwT-5-Rtw1BHp" target="_blank">
-                                        <span class="text-blue-400 text-sm hover:text-white transition">Watch Series →</span>
-                                    </a>
-                                </div>
+                    </div>
+
+                    <div class="youtube-card rounded-xl overflow-hidden">
+                        <a href="https://www.youtube.com/playlist?list=PLISyINFRGf7an5UwX27hjwT-5-Rtw1BHp" target="_blank">
+                            <img src="https://i.ytimg.com/vi/qJel1S3xqNE/hqdefault.jpg" alt="ESBP 2024 Pre-Calculus Series thumbnail" class="youtube-thumb">
+                        </a>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">ESBP 2024 - Pre-Calculus Series</h3>
+                            <p class="text-gray-300 mb-4">
+                                Mini lecture series for key pre-calculus concepts, tailored for ESBP students.
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-400 text-sm">19 videos</span>
+                                <a href="https://www.youtube.com/playlist?list=PLISyINFRGf7an5UwX27hjwT-5-Rtw1BHp" target="_blank" class="accent-link text-sm">Watch Series →</a>
                             </div>
                         </div>
                     </div>
@@ -553,26 +543,17 @@
         </div>
     </section>
 
-    <script>
-        function showTab(tabName) {
-            // Hide all tabs
-            document.getElementById('positions-tab').classList.add('hidden');
-            document.getElementById('youtube-tab').classList.add('hidden');
-            
-            // Remove active class from all buttons
-            document.querySelectorAll('.tab-button').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            
-            // Show selected tab
-            if (tabName === 'positions') {
-                document.getElementById('positions-tab').classList.remove('hidden');
-                document.querySelectorAll('.tab-button')[0].classList.add('active');
-            } else {
-                document.getElementById('youtube-tab').classList.remove('hidden');
-                document.querySelectorAll('.tab-button')[1].classList.add('active');
-            }
-        }
-    </script>
+    <!-- Footer -->
+    <footer class="section-divider py-10 px-4">
+        <div class="container mx-auto max-w-6xl flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-400">
+            <p>© 2026 Anthony Ha-Anh Pham</p>
+            <div class="flex items-center gap-6">
+                <a href="https://github.com/RicePandaaaa" class="hover:text-white" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/anthony-ha-pham/" class="hover:text-white" target="_blank">LinkedIn</a>
+                <a href="https://www.youtube.com/@ptanthony" class="hover:text-white" target="_blank">YouTube</a>
+                <a href="mailto:anthony.ha.pham@gmail.com" class="hover:text-white">Email</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

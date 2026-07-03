@@ -1,26 +1,41 @@
-/* Gradient background */
-.gradient-bg {
-    background: linear-gradient(135deg, #1a2332 0%, #2d3e50 50%, #34495e 100%);
+/* ── Base ────────────────────────────────────────────────────── */
+html {
+    scroll-behavior: smooth;
 }
 
-.gradient-darker-bg {
-    background: linear-gradient(135deg, #1a2332 0%, #1d3e50 50%, #24495e 100%);
+body {
+    font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+    background-color: #161e2b;
 }
 
-/* Full height intro section */
-.full-screen-intro {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    padding: 2rem 1rem;
+h1, h2, h3 {
+    letter-spacing: -0.02em;
 }
 
-/* Profile picture glow effect */
+section {
+    scroll-margin-top: 4.5rem;
+}
+
+/* Subtle divider between sections */
+.section-divider {
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ── Navigation ──────────────────────────────────────────────── */
+.site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(22, 30, 43, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ── Hero ────────────────────────────────────────────────────── */
 .profile-glow {
     box-shadow: 0 0 50px rgba(119, 187, 213, 0.5);
 }
 
-/* Gradient text effect */
 .gradient-text {
     background: linear-gradient(135deg, #77BBD5 0%, #99ddf7 100%);
     -webkit-background-clip: text;
@@ -28,26 +43,51 @@
     background-clip: text;
 }
 
-/* Accent color for highlights */
-.accent-text {
+.text-accent {
     color: #77BBD5;
 }
 
-/* Tech card glassmorphism effect */
-.tech-card {
-    background: rgba(255, 255, 255, 0.20);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    transition: all 0.3s ease;
+.hover\:text-accent:hover {
+    color: #77BBD5;
 }
 
-.tech-card:hover {
-    background: rgba(255, 255, 255, 0.25);
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+/* Inline accent links */
+.accent-link {
+    color: #99ddf7;
+    font-weight: 600;
 }
 
-/* Responsive tech grid */
+.accent-link:hover {
+    color: #fff;
+}
+
+/* ── Cards (shared glass base) ───────────────────────────────── */
+.tech-card, .project-card, .teaching-card, .youtube-card, .research-feature-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+/* Hover: brighten border everywhere; lift only the small cards */
+.tech-card:hover, .project-card:hover, .teaching-card:hover, .youtube-card:hover, .research-feature-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(119, 187, 213, 0.4);
+}
+
+.tech-card:hover, .project-card:hover {
+    transform: translateY(-2px);
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-header {
+    flex-grow: 1;
+}
+
+/* ── Tech grid ───────────────────────────────────────────────── */
 .tech-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -60,12 +100,6 @@
     }
 }
 
-@media (min-width: 768px) {
-    .tech-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
 @media (min-width: 1024px) {
     .tech-grid {
         grid-template-columns: repeat(4, 1fr);
@@ -73,94 +107,27 @@
     }
 }
 
-/* Research Section */
-.research-feature-card {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-.tech-tag {
+/* ── Tags (single unified style) ─────────────────────────────── */
+.tag {
     display: inline-block;
     padding: 0.25rem 0.75rem;
-    background: rgba(119, 187, 213, 0.2);
+    background: rgba(119, 187, 213, 0.12);
     color: #99ddf7;
+    border: 1px solid rgba(119, 187, 213, 0.25);
     border-radius: 9999px;
-    font-size: 0.875rem;
-    border: 1px solid rgba(119, 187, 213, 0.3);
-}
-
-/* Teaching Section */
-.tab-button {
-    padding: 0.75rem 2rem;
-    background: transparent;
-    color: #9CA3AF;
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    border-radius: 9999px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.tab-button:hover {
-    border-color: rgba(119, 187, 213, 0.5);
-    color: #fff;
-}
-
-.tab-button.active {
-    background: rgba(119, 187, 213, 0.2);
-    border-color: #77BBD5;
-    color: #fff;
-}
-
-.teaching-card, .youtube-card, .research-feature-card {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
-}
-
-.teaching-card:hover, .youtube-card:hover, .project-card:hover, .research-feature-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    background: rgba(255, 255, 255, 0.08);
-}
-
-.skill-tag {
-    display: inline-block;
-    padding: 0.25rem 0.75rem;
-    background: rgba(255, 255, 255, 0.1);
-    color: #E5E7EB;
-    border-radius: 0.375rem;
-    font-size: 0.75rem;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-/* Projects Section */
-.project-card {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
-    display: flex;
-    flex-direction: column;
-}
-
-.project-header {
-    flex-grow: 1;
-}
-
-.project-tag {
-    display: inline-block;
-    padding: 0.25rem 0.5rem;
-    background: rgba(119, 187, 213, 0.15);
-    color: #99ddf7;
-    border-radius: 0.375rem;
     font-size: 0.75rem;
     font-weight: 500;
 }
 
+/* ── YouTube thumbnails ──────────────────────────────────────── */
+.youtube-thumb {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+    display: block;
+}
+
+/* ── Links & buttons ─────────────────────────────────────────── */
 a, button {
-    transition: all 0.3s ease;
+    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
