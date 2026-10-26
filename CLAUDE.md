@@ -4,15 +4,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a static personal portfolio website for Anthony Ha-Anh Pham, hosted via GitHub Pages at the domain specified in `CNAME`. No build step, bundler, or package manager is used — the site is plain HTML, CSS, and a small amount of vanilla JavaScript.
+This is a static personal portfolio / CV site for Anthony Ha-Anh Pham, hosted via GitHub Pages at the domain in `CNAME` (anthonyhpham.me). No build step, bundler, or package manager is used — the site is plain HTML and CSS with no JavaScript of its own.
 
 ## Development
 
 To preview locally, open `index.html` directly in a browser or serve it with any static file server:
 
 ```
-npx serve .
-# or
 python -m http.server
 ```
 
@@ -20,17 +18,17 @@ There are no tests, no linting configs, and no CI pipelines.
 
 ## Architecture
 
-The entire site is a single-page layout in `index.html` with four full-width `<section>` elements stacked vertically:
+The entire site is a single page in `index.html`: a sticky `<nav>`, four stacked `<section>` elements, and a `<footer>`.
 
-1. **Intro** — hero with profile photo, social links, and a tech stack icon grid
-2. **Projects** (`#projects`) — card grid, each card has a header (grows to fill) and a footer with tech tags
-3. **Research** (`#research`) — feature cards in a two-column layout (`md:w-1/3` metadata + `md:w-2/3` detail)
-4. **Teaching** (`#teaching`) — tabbed interface switching between "Teaching Positions" and "YouTube Content"; tab logic is an inline `<script>` at the bottom of the file using `showTab(tabName)`
+1. **Intro** — profile photo, name, social icon links, a short bio, and a tech stack grid of logo tiles (`.tech-grid` / `.tech-card`, each tile links to the tool's homepage)
+2. **Projects** (`#projects`) — card grid; each `.project-card` is a flex column whose `.project-header` grows so the tag row (`.project-footer`) sits at the bottom
+3. **Research** (`#research`) — full-width `.research-feature-card`s in a two-column layout (`md:w-1/3` metadata + `md:w-2/3` overview and contributions)
+4. **Teaching** (`#teaching`) — a grid of `.teaching-card`s, followed by a "YouTube Series" grid of `.youtube-card`s with playlist thumbnails
 
 **Styling** splits between:
-- `styles.css` — custom classes for glassmorphism cards, gradient text/backgrounds, tag variants (`project-tag`, `tech-tag`, `skill-tag`), hover lift effects, the responsive `tech-grid`, and tab button states
-- Tailwind CSS (loaded via CDN) — used for layout, spacing, typography, and responsive breakpoints throughout `index.html`
+- `styles.css` — base font/background, sticky nav, hero accents (`.profile-glow`, `.gradient-text`, `.text-accent`, `.accent-link`), the shared card base and hover rules, the responsive `.tech-grid`, the single `.tag` pill style, and YouTube thumbnail sizing
+- Tailwind CSS (loaded via CDN) — layout, spacing, typography, and responsive breakpoints throughout `index.html`
 
-The accent color is `#77BBD5` / `#99ddf7` (light blue). All card types share the same glassmorphism base (`rgba(255,255,255,0.05)` background, `backdrop-filter: blur`, `rgba(255,255,255,0.1)` border) and lift on hover via the shared rule on line 124 of `styles.css`.
+The page background is `#161e2b`; the accent is `#77BBD5` / `#99ddf7` (light blue). All card types share one base in `styles.css` (`rgba(255,255,255,0.04)` background, `rgba(255,255,255,0.1)` border) and brighten their border on hover; only `.tech-card` and `.project-card` also lift.
 
-**Assets** (`assets/`) hold images referenced directly in `index.html`. Some tech logos are loaded from external Wikimedia/GitHub URLs rather than local files.
+**Assets** (`assets/`) hold images referenced directly in `index.html`; favicons and the web manifest live in `assets/icons/`. Some tech logos and the YouTube thumbnails are loaded from external URLs (python.org, Wikimedia, GitHub, i.ytimg.com) rather than local files.
