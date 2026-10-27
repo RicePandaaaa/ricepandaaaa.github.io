@@ -20,7 +20,6 @@
 
     /* Tints derived from the base colors */
     --nav-bg: color-mix(in srgb, var(--bg) 85%, transparent);
-    --accent-glow: color-mix(in srgb, var(--accent) 50%, transparent);
     --accent-border: color-mix(in srgb, var(--accent) 40%, transparent);
     --tag-bg: color-mix(in srgb, var(--accent) 12%, transparent);
     --tag-border: color-mix(in srgb, var(--accent) 25%, transparent);
@@ -88,18 +87,7 @@ section {
     border-bottom: 1px solid var(--border-subtle);
 }
 
-/* ── Hero ────────────────────────────────────────────────────── */
-.profile-glow {
-    box-shadow: 0 0 50px var(--accent-glow);
-}
-
-.gradient-text {
-    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
+/* ── Links ───────────────────────────────────────────────────── */
 /* Inline accent links */
 .accent-link {
     color: var(--accent-light);
@@ -108,6 +96,19 @@ section {
 
 .accent-link:hover, .accent-link:focus-visible {
     color: var(--text-strong);
+}
+
+/* ↗ after text links that open a new tab (pair with an sr-only "(opens in new tab)").
+   Drawn as a mask so it takes the link's current color, including on hover. */
+.ext-link::after {
+    content: "";
+    display: inline-block;
+    width: 0.7em;
+    height: 0.7em;
+    margin-left: 0.2em;
+    background-color: currentColor;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 17 17 7M8 7h9v9'/%3E%3C/svg%3E") no-repeat center / contain;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 17 17 7M8 7h9v9'/%3E%3C/svg%3E") no-repeat center / contain;
 }
 
 /* ── Cards (shared glass base) ───────────────────────────────── */
