@@ -170,6 +170,16 @@ section {
     font-weight: 500;
 }
 
+/* ── Research contribution lists ─────────────────────────────── */
+/* Decorative ▸ marker; the "/ ''" alt text keeps screen readers from reading it.
+   (Tailwind's reset removes list styling, so the <ul> also has role="list".) */
+.contrib-list li::before {
+    content: "▸";
+    content: "▸" / "";
+    color: var(--accent);
+    margin-right: 0.5rem;
+}
+
 /* ── YouTube thumbnails ──────────────────────────────────────── */
 .youtube-thumb {
     width: 100%;
