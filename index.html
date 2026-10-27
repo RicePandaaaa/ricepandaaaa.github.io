@@ -17,20 +17,23 @@
     <link rel="manifest" href="assets/icons/site.webmanifest">
 </head>
 <body class="text-white">
+    <a href="#main" class="skip-link">Skip to content</a>
+
     <!-- Navigation -->
-    <nav class="site-nav">
-        <div class="container mx-auto max-w-6xl px-4 h-14 flex items-center justify-between">
-            <a href="#" class="font-semibold tracking-tight text-white hover:text-accent">Anthony Ha-Anh Pham</a>
+    <header class="site-nav">
+        <nav aria-label="Primary" class="container mx-auto max-w-6xl px-4 h-14 flex items-center justify-between">
+            <a href="#intro" class="font-semibold tracking-tight text-white hover:text-accent">Anthony Ha-Anh Pham</a>
             <div class="flex items-center gap-6 text-sm text-gray-300">
                 <a href="#projects" class="hover:text-white">Projects</a>
                 <a href="#research" class="hover:text-white">Research</a>
                 <a href="#teaching" class="hover:text-white">Teaching</a>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
+    <main id="main">
     <!-- Intro -->
-    <section class="py-16 md:py-24 px-4">
+    <section id="intro" class="py-16 md:py-24 px-4">
         <div class="container mx-auto max-w-6xl">
             <div class="flex flex-col md:flex-row gap-10 md:gap-16 items-center">
                 <!-- Left: Profile + Social Links -->
@@ -148,14 +151,17 @@
                             <h3 class="text-xl font-bold text-white">Blood Glucose Monitor</h3>
                         </div>
                         <p class="text-gray-400 text-sm mb-4">August 2024 – May 2025</p>
-                        <p class="text-gray-300 text-sm mb-4 mt-2">
-                            Lead software developer for a senior-year capstone project on non-invasive
-                            blood glucose monitoring using millimeter-wave sensing.
-                            <br><br>
-                            Designed an Android app with Bluetooth Low Energy, wrote ESP32 firmware to
-                            interface with a NANO VNA, and built an XGBoost model to estimate glucose
-                            levels from RF signal data.
-                        </p>
+                        <div class="text-gray-300 text-sm mb-4 mt-2 space-y-5">
+                            <p>
+                                Lead software developer for a senior-year capstone project on non-invasive
+                                blood glucose monitoring using millimeter-wave sensing.
+                            </p>
+                            <p>
+                                Designed an Android app with Bluetooth Low Energy, wrote ESP32 firmware to
+                                interface with a NANO VNA, and built an XGBoost model to estimate glucose
+                                levels from RF signal data.
+                            </p>
+                        </div>
                     </div>
                     <div class="project-footer p-6 pt-0">
                         <div class="flex flex-wrap gap-2">
@@ -181,14 +187,17 @@
                             </div>
                         </div>
                         <p class="text-gray-400 text-sm mb-4">February 2025</p>
-                        <p class="text-gray-300 text-sm mb-4 mt-2">
-                            A web app that teaches sign language in real time using computer vision,
-                            built with a team of four during TAMUhack 2025, a 24-hour hackathon.
-                            <br><br>
-                            Responsible for the full ML pipeline: collecting and labeling a custom
-                            dataset with MediaPipe hand landmarks, then training a TensorFlow
-                            classifier that recognizes ASL gestures live via webcam.
-                        </p>
+                        <div class="text-gray-300 text-sm mb-4 mt-2 space-y-5">
+                            <p>
+                                A web app that teaches sign language in real time using computer vision,
+                                built with a team of four during TAMUhack 2025, a 24-hour hackathon.
+                            </p>
+                            <p>
+                                Responsible for the full ML pipeline: collecting and labeling a custom
+                                dataset with MediaPipe hand landmarks, then training a TensorFlow
+                                classifier that recognizes ASL gestures live via webcam.
+                            </p>
+                        </div>
                     </div>
                     <div class="project-footer p-6 pt-0">
                         <div class="flex flex-wrap gap-2">
@@ -213,15 +222,18 @@
                             </div>
                         </div>
                         <p class="text-gray-400 text-sm mb-4">March 2024 – April 2024</p>
-                        <p class="text-gray-300 text-sm mb-4 mt-2">
-                            An autonomous target-seeking
-                            <a href="https://www.scuttlerobot.org/" class="accent-link" target="_blank">SCUTTLE</a>
-                            robot built by a team of four for MXET 300 (Mechatronics I).
-                            <br><br>
-                            Designed and implemented the dynamic obstacle avoidance algorithm, the
-                            autonomous navigation logic, and real-time target detection using HSV
-                            color filtering in OpenCV.
-                        </p>
+                        <div class="text-gray-300 text-sm mb-4 mt-2 space-y-5">
+                            <p>
+                                An autonomous target-seeking
+                                <a href="https://www.scuttlerobot.org/" class="accent-link" target="_blank">SCUTTLE</a>
+                                robot built by a team of four for MXET 300 (Mechatronics I).
+                            </p>
+                            <p>
+                                Designed and implemented the dynamic obstacle avoidance algorithm, the
+                                autonomous navigation logic, and real-time target detection using HSV
+                                color filtering in OpenCV.
+                            </p>
+                        </div>
                     </div>
                     <div class="project-footer p-6 pt-0">
                         <div class="flex flex-wrap gap-2">
@@ -246,13 +258,16 @@
                             </div>
                         </div>
                         <p class="text-gray-400 text-sm mb-4">August 2023 – Present</p>
-                        <p class="text-gray-300 text-sm mb-4 mt-2">
-                            Creator and lead maintainer of the Discord bot managing the ENGR TA
-                            Organization server at Texas A&M.
-                            <br><br>
-                            Serves 5,000+ faculty, TAs, and students with custom commands, automated
-                            role and membership management, and moderation tools.
-                        </p>
+                        <div class="text-gray-300 text-sm mb-4 mt-2 space-y-5">
+                            <p>
+                                Creator and lead maintainer of the Discord bot managing the ENGR TA
+                                Organization server at Texas A&M.
+                            </p>
+                            <p>
+                                Serves 5,000+ faculty, TAs, and students with custom commands, automated
+                                role and membership management, and moderation tools.
+                            </p>
+                        </div>
                     </div>
                     <div class="project-footer p-6 pt-0">
                         <div class="flex flex-wrap gap-2">
@@ -275,15 +290,18 @@
                             </div>
                         </div>
                         <p class="text-gray-400 text-sm mb-4">February 2023 – April 2023</p>
-                        <p class="text-gray-300 text-sm mb-4 mt-2">
-                            Lead developer for my group in AI4ALL Apply AI's Spring 2023 cohort,
-                            building recurrent neural networks to recognize five American Sign
-                            Language words from video sequences.
-                            <br><br>
-                            Iterated on six LSTM variants with different hyperparameters, trained on the
-                            <a href="https://www.kaggle.com/competitions/asl-signs/overview" class="accent-link" target="_blank">Kaggle ASL Signs Challenge</a>
-                            dataset.
-                        </p>
+                        <div class="text-gray-300 text-sm mb-4 mt-2 space-y-5">
+                            <p>
+                                Lead developer for my group in AI4ALL Apply AI's Spring 2023 cohort,
+                                building recurrent neural networks to recognize five American Sign
+                                Language words from video sequences.
+                            </p>
+                            <p>
+                                Iterated on six LSTM variants with different hyperparameters, trained on the
+                                <a href="https://www.kaggle.com/competitions/asl-signs/overview" class="accent-link" target="_blank">Kaggle ASL Signs Challenge</a>
+                                dataset.
+                            </p>
+                        </div>
                     </div>
                     <div class="project-footer p-6 pt-0">
                         <div class="flex flex-wrap gap-2">
@@ -322,11 +340,14 @@
                         </div>
                         <div class="md:w-2/3">
                             <h4 class="text-xl font-semibold text-white mb-4">Project & Thesis Overview</h4>
-                            <p class="text-gray-300 mb-6">
-                                I currently am working on my Master's thesis, which is an exploration of using deep learning models to analyze mmWave radar data to detect pests in cattle. I am also working in the fine-tuning of an XGBoost model to compare against the deep learning models.<br><br>
-
-                                As an undergraduate researcher, I assisted in researching alternative ways of analyzing millimeter wave radar data, particularly the back-projection algorithm (BPA) and the Range Migration Algorithm (RMA).
-                            </p>
+                            <div class="text-gray-300 mb-6 space-y-6">
+                                <p>
+                                    I currently am working on my Master's thesis, which is an exploration of using deep learning models to analyze mmWave radar data to detect pests in cattle. I am also working in the fine-tuning of an XGBoost model to compare against the deep learning models.
+                                </p>
+                                <p>
+                                    As an undergraduate researcher, I assisted in researching alternative ways of analyzing millimeter wave radar data, particularly the back-projection algorithm (BPA) and the Range Migration Algorithm (RMA).
+                                </p>
+                            </div>
                             <h4 class="text-xl font-semibold text-white mb-4">Contributions</h4>
                             <ul class="space-y-2 text-gray-300">
                                 <li class="flex items-start">
@@ -512,7 +533,7 @@
                             <img src="https://i.ytimg.com/vi/I198gkjpnqE/hqdefault.jpg" alt="ENGR 102 Review Series thumbnail" class="youtube-thumb">
                         </a>
                         <div class="p-6">
-                            <h3 class="text-xl font-bold text-white mb-2">ENGR 102 Review Series</h3>
+                            <h4 class="text-xl font-bold text-white mb-2">ENGR 102 Review Series</h4>
                             <p class="text-gray-300 mb-4">
                                 Comprehensive exam reviews for ENGR 102. Consists mostly of solving problem sets provided
                                 by the professors.
@@ -529,7 +550,7 @@
                             <img src="https://i.ytimg.com/vi/qJel1S3xqNE/hqdefault.jpg" alt="ESBP 2024 Pre-Calculus Series thumbnail" class="youtube-thumb">
                         </a>
                         <div class="p-6">
-                            <h3 class="text-xl font-bold text-white mb-2">ESBP 2024 - Pre-Calculus Series</h3>
+                            <h4 class="text-xl font-bold text-white mb-2">ESBP 2024 - Pre-Calculus Series</h4>
                             <p class="text-gray-300 mb-4">
                                 Mini lecture series for key pre-calculus concepts, tailored for ESBP students.
                             </p>
@@ -543,6 +564,7 @@
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer class="section-divider py-10 px-4">
