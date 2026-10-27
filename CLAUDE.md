@@ -25,6 +25,22 @@ python -m http.server
 
 The binary lives in the git-ignored `.tools/` directory. To get it on a new machine, download the asset for your platform from https://github.com/tailwindlabs/tailwindcss/releases/tag/v3.4.17 (e.g. `tailwindcss-linux-x64`), check it against that release's `sha256sums.txt`, and `chmod +x` it. Stay on v3.4.17 unless deliberately upgrading — v4 changes the config format and preflight.
 
+### Share card (link previews)
+
+`assets/og-card.jpg` (1200×630) is the image LinkedIn/Discord/Slack/iMessage show for the site; it's referenced by the Open Graph tags in `<head>` (which need **absolute** `https://anthonyhpham.me/...` URLs). Its source is `assets/og-card.html`. If the name, title, or headshot changes, regenerate it:
+
+```
+google-chrome --headless=new --hide-scrollbars --allow-file-access-from-files --virtual-time-budget=6000 \
+  --window-size=1200,630 --screenshot=/tmp/og-card.png assets/og-card.html
+# then convert to JPEG (quality ~88) as assets/og-card.jpg
+```
+
+Design constraints: navy background (dark enough not to glare in dark-mode feeds, no bright edges against light feeds) and everything centered so a square center-crop (630×630, used by some messengers) keeps the photo and full name. After deploying, check previews with LinkedIn's Post Inspector or opengraph.xyz.
+
+### Résumé link (pending)
+
+Three commented-out résumé links are marked `RESUME-TODO` in `index.html` (nav from `sm` up, hero under the social icons, footer). Once `assets/Anthony_Pham_Resume.pdf` exists, uncomment all three — no Tailwind rebuild needed (their classes are already generated).
+
 There are no tests, no linting configs, and no CI pipelines.
 
 ## Architecture
