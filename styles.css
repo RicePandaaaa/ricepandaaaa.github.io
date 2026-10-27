@@ -31,8 +31,16 @@
 }
 
 /* ── Base ────────────────────────────────────────────────────── */
-html {
-    scroll-behavior: smooth;
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+/* Keyboard focus ring for every link/button (mouse clicks don't show it) */
+:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
 }
 
 body {
@@ -98,7 +106,7 @@ section {
     font-weight: 600;
 }
 
-.accent-link:hover {
+.accent-link:hover, .accent-link:focus-visible {
     color: var(--text-strong);
 }
 
@@ -109,14 +117,16 @@ section {
     transition: background-color var(--duration) ease, border-color var(--duration) ease, transform var(--duration) ease;
 }
 
-/* Hover: brighten border everywhere; lift only the small cards */
-.tech-card:hover, .project-card:hover, .teaching-card:hover, .youtube-card:hover, .research-feature-card:hover {
+/* Only tech cards are links, so only they react to hover/focus */
+.tech-card:hover, .tech-card:focus-visible {
     background: var(--surface-hover);
     border-color: var(--accent-border);
 }
 
-.tech-card:hover, .project-card:hover {
-    transform: translateY(-2px);
+@media (prefers-reduced-motion: no-preference) {
+    .tech-card:hover, .tech-card:focus-visible {
+        transform: translateY(-2px);
+    }
 }
 
 .project-card {

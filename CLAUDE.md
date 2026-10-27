@@ -37,11 +37,13 @@ The entire site is a single page in `index.html`: a sticky `<nav>`, four stacked
 4. **Teaching** (`#teaching`) — a grid of `.teaching-card`s, followed by a "YouTube Series" grid of `.youtube-card`s with playlist thumbnails
 
 **Styling** splits between:
-- `styles.css` — base font/background, sticky nav, hero accents (`.profile-glow`, `.gradient-text`, `.text-accent`, `.accent-link`), the shared card base and hover rules, the responsive `.tech-grid`, the single `.tag` pill style, and YouTube thumbnail sizing
+- `styles.css` — color tokens, base font/background, the global `:focus-visible` ring, skip link, sticky nav, hero accents (`.profile-glow`, `.gradient-text`, `.accent-link`), the shared card base, the responsive `.tech-grid`, the single `.tag` pill style, and YouTube thumbnail sizing
 - `tailwind.css` (generated, see above; linked before `styles.css`) — Tailwind utilities for layout, spacing, typography, and responsive breakpoints throughout `index.html`
 
 **Colors are tokens.** Every color is a CSS variable in the `:root` block at the top of `styles.css` (`--bg`, `--text-strong` / `--text-body` / `--text-muted`, `--accent` / `--accent-light`, white-overlay surfaces and borders, and `color-mix()` tints derived from the accent). Never write a raw hex/rgba value elsewhere — add or reuse a token. In `index.html`, text color uses the Tailwind classes `text-strong`, `text-body`, `text-muted`, `text-accent` (mapped to those variables in `tailwind.config.js`), not Tailwind's `gray-*`/`white` palette.
 
-All card types share one base in `styles.css` (`--surface` background, `--border` border) and brighten their border on hover; only `.tech-card` and `.project-card` also lift.
+All card types share one base in `styles.css` (`--surface` background, `--border` border). **Only interactive elements react to hover**: `.tech-card` (the only card that is a link) brightens and lifts; project/research/teaching/YouTube cards are static.
+
+**Interaction rules:** every hover effect has a matching keyboard-focus effect — in Tailwind, pair `hover:x` with `focus-visible:x` (and `group-hover:` with `group-focus-visible:`); in `styles.css`, list `:hover, :focus-visible` together. Movement (lift, scale, smooth scroll) is gated on reduced-motion preferences — use `motion-safe:` in Tailwind or `@media (prefers-reduced-motion: no-preference)` in CSS. Color changes don't need gating.
 
 **Assets** (`assets/`) hold images referenced directly in `index.html`; favicons and the web manifest live in `assets/icons/`. Some tech logos and the YouTube thumbnails are loaded from external URLs (python.org, Wikimedia, GitHub, i.ytimg.com) rather than local files.
