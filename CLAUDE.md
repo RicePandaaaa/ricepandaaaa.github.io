@@ -29,9 +29,9 @@ There are no tests, no linting configs, and no CI pipelines.
 
 ## Architecture
 
-The entire site is a single page in `index.html`: a sticky `<nav>`, four stacked `<section>` elements, and a `<footer>`.
+The entire site is a single page in `index.html`: a sticky `<nav>`, four stacked `<section>` elements, and a `<footer>`. The nav name shows in full from `sm` (640px), as "Anthony Pham" below that, and is hidden below 360px so the bar never wraps (the h1 still shows the name). Test layouts at 320px — it's the WCAG reflow width.
 
-1. **Intro** — profile photo, name, social icon links, a short bio, and a tech stack grid of logo tiles (`.tech-grid` / `.tech-card`, each tile links to the tool's homepage)
+1. **Intro** — profile photo, name, social icon links, a short bio, and a tech stack grid of logo tiles (`.tech-grid` / `.tech-card`, each tile links to the tool's homepage). Below `sm` the tiles become compact rows (small logo beside label, `flex … sm:block`); from `sm` up they're stacked logo-over-label tiles
 2. **Projects** (`#projects`) — card grid; each `.project-card` is a flex column whose `.project-header` grows so the tag row (`.project-footer`) sits at the bottom
 3. **Research** (`#research`) — full-width `.research-feature-card`s in a two-column layout (`md:w-1/3` metadata + `md:w-2/3` overview and contributions)
 4. **Teaching** (`#teaching`) — a grid of `.teaching-card`s, followed by a "YouTube Series" grid of `.youtube-card`s with playlist thumbnails
