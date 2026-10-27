@@ -1,3 +1,35 @@
+/* ── Tokens ──────────────────────────────────────────────────── */
+/* Every color in the site comes from here. Text tiers and the accent are
+   also exposed to Tailwind (tailwind.config.js) as text-strong, text-body,
+   text-muted, text-accent. */
+:root {
+    --bg: #161e2b;
+
+    --text-strong: #fff;      /* headings, default text */
+    --text-body: #d1d5db;     /* paragraphs */
+    --text-muted: #9ca3af;    /* dates, metadata, captions */
+
+    --accent: #77BBD5;
+    --accent-light: #99ddf7;
+
+    /* White overlays on --bg */
+    --surface: rgba(255, 255, 255, 0.04);
+    --surface-hover: rgba(255, 255, 255, 0.06);
+    --border: rgba(255, 255, 255, 0.1);
+    --border-subtle: rgba(255, 255, 255, 0.06);
+
+    /* Tints derived from the base colors */
+    --nav-bg: color-mix(in srgb, var(--bg) 85%, transparent);
+    --accent-glow: color-mix(in srgb, var(--accent) 50%, transparent);
+    --accent-border: color-mix(in srgb, var(--accent) 40%, transparent);
+    --tag-bg: color-mix(in srgb, var(--accent) 12%, transparent);
+    --tag-border: color-mix(in srgb, var(--accent) 25%, transparent);
+
+    --radius-sm: 0.375rem;
+    --radius-pill: 9999px;
+    --duration: 0.2s;
+}
+
 /* ── Base ────────────────────────────────────────────────────── */
 html {
     scroll-behavior: smooth;
@@ -5,7 +37,7 @@ html {
 
 body {
     font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
-    background-color: #161e2b;
+    background-color: var(--bg);
 }
 
 h1, h2, h3, .youtube-card h4 {
@@ -19,10 +51,10 @@ h1, h2, h3, .youtube-card h4 {
     left: 1rem;
     z-index: 200;
     padding: 0.5rem 1rem;
-    background: #fff;
-    color: #161e2b;
+    background: var(--text-strong);
+    color: var(--bg);
     font-weight: 600;
-    border-radius: 0.375rem;
+    border-radius: var(--radius-sm);
 }
 
 .skip-link:focus {
@@ -35,7 +67,7 @@ section {
 
 /* Subtle divider between sections */
 .section-divider {
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    border-top: 1px solid var(--border-subtle);
 }
 
 /* ── Navigation ──────────────────────────────────────────────── */
@@ -43,52 +75,44 @@ section {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(22, 30, 43, 0.85);
+    background: var(--nav-bg);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    border-bottom: 1px solid var(--border-subtle);
 }
 
 /* ── Hero ────────────────────────────────────────────────────── */
 .profile-glow {
-    box-shadow: 0 0 50px rgba(119, 187, 213, 0.5);
+    box-shadow: 0 0 50px var(--accent-glow);
 }
 
 .gradient-text {
-    background: linear-gradient(135deg, #77BBD5 0%, #99ddf7 100%);
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
-.text-accent {
-    color: #77BBD5;
-}
-
-.hover\:text-accent:hover {
-    color: #77BBD5;
-}
-
 /* Inline accent links */
 .accent-link {
-    color: #99ddf7;
+    color: var(--accent-light);
     font-weight: 600;
 }
 
 .accent-link:hover {
-    color: #fff;
+    color: var(--text-strong);
 }
 
 /* ── Cards (shared glass base) ───────────────────────────────── */
 .tech-card, .project-card, .teaching-card, .youtube-card, .research-feature-card {
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    transition: background-color var(--duration) ease, border-color var(--duration) ease, transform var(--duration) ease;
 }
 
 /* Hover: brighten border everywhere; lift only the small cards */
 .tech-card:hover, .project-card:hover, .teaching-card:hover, .youtube-card:hover, .research-feature-card:hover {
-    background: rgba(255, 255, 255, 0.06);
-    border-color: rgba(119, 187, 213, 0.4);
+    background: var(--surface-hover);
+    border-color: var(--accent-border);
 }
 
 .tech-card:hover, .project-card:hover {
@@ -128,10 +152,10 @@ section {
 .tag {
     display: inline-block;
     padding: 0.25rem 0.75rem;
-    background: rgba(119, 187, 213, 0.12);
-    color: #99ddf7;
-    border: 1px solid rgba(119, 187, 213, 0.25);
-    border-radius: 9999px;
+    background: var(--tag-bg);
+    color: var(--accent-light);
+    border: 1px solid var(--tag-border);
+    border-radius: var(--radius-pill);
     font-size: 0.75rem;
     font-weight: 500;
 }
@@ -146,5 +170,5 @@ section {
 
 /* ── Links & buttons ─────────────────────────────────────────── */
 a, button {
-    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    transition: color var(--duration) ease, background-color var(--duration) ease, border-color var(--duration) ease, transform var(--duration) ease;
 }
